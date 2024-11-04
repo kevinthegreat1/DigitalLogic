@@ -1,0 +1,15 @@
+module ThreeBit7SegmentDecoderFPGAComp(input [2:0]SW, output [6:0]HEX0, output [2:0]LEDR);
+	ThreeBit7SegmentDecoder(SW[2], SW[1], SW[0], HEX0[0], HEX0[1], HEX0[2], HEX0[3], HEX0[4], HEX0[5], HEX0[6]);
+	assign LEDR=SW;
+endmodule
+
+module ThreeBit7SegmentDecoder(A2, A1, A0, A, B, C, D, E, F, G);
+	input A2;
+	input A1;
+	input A0;
+	output A, B, C, D, E, F, G;
+
+	assign A = A1 | A2~^A0;
+	assign B = ~A2 | A1~^A0;
+	assign C = A2 | ~A1 | A0;
+endmodule
