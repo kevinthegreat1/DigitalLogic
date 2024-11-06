@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FourBit2to1Mux
-Mon Nov  4 14:37:32 2024
+Tue Nov  5 23:06:54 2024
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov  4 14:37:32 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov  5 23:06:54 2024       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; FourBit2to1Mux                              ;
 ; Top-level Entity Name              ; FourBit2to1Mux                              ;
@@ -269,7 +269,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Mon Nov  4 14:37:20 2024
+    Info: Processing started: Tue Nov  5 23:06:42 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FourBit2to1Mux -c FourBit2to1Mux
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -299,8 +299,8 @@ Info (21057): Implemented 26 device resources after synthesis - the final resour
     Info (21061): Implemented 4 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
     Info: Peak virtual memory: 4752 megabytes
-    Info: Processing ended: Mon Nov  4 14:37:32 2024
+    Info: Processing ended: Tue Nov  5 23:06:54 2024
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Total CPU time (on all processors): 00:00:29
 
 

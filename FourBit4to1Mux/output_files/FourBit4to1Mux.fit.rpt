@@ -1,5 +1,5 @@
 Fitter report for FourBit4to1Mux
-Mon Nov  4 15:09:10 2024
+Tue Nov  5 23:46:09 2024
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Nov  4 15:09:10 2024       ;
+; Fitter Status                      ; Successful - Tue Nov  5 23:46:09 2024       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; FourBit4to1Mux                              ;
 ; Top-level Entity Name              ; FourBit4to1Mux                              ;
@@ -2213,13 +2213,14 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------+--------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                            ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Entity Name    ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+----------------+--------------+
-; |FourBit4to1Mux            ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 22   ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; |FourBit4to1Mux     ; FourBit4to1Mux ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                      ;
++------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node         ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                           ; Entity Name            ; Library Name ;
++------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------+------------------------+--------------+
+; |FourBit4to1Mux                    ; 8 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 22   ; 0            ; 8 (0)        ; 0 (0)             ; 0 (0)            ; |FourBit4to1Mux                               ; FourBit4to1Mux         ; work         ;
+;    |FourBit4to1MuxInternal:comb_3| ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; |FourBit4to1Mux|FourBit4to1MuxInternal:comb_3 ; FourBit4to1MuxInternal ; work         ;
++------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -2253,58 +2254,58 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+---------------------------------------------------+
-; Pad To Core Delay Chain Fanout                    ;
-+---------------------+-------------------+---------+
-; Source Pin / Fanout ; Pad To Core Index ; Setting ;
-+---------------------+-------------------+---------+
-; SW[8]               ;                   ;         ;
-;      - LEDR~1       ; 1                 ; 6       ;
-; SW[17]              ;                   ;         ;
-;      - LEDR~0       ; 0                 ; 6       ;
-;      - LEDR~1       ; 0                 ; 6       ;
-;      - LEDR~2       ; 0                 ; 6       ;
-;      - LEDR~4       ; 0                 ; 6       ;
-;      - LEDR~5       ; 0                 ; 6       ;
-;      - LEDR~6       ; 0                 ; 6       ;
-; SW[4]               ;                   ;         ;
-;      - LEDR~0       ; 0                 ; 6       ;
-; SW[16]              ;                   ;         ;
-;      - LEDR~0       ; 0                 ; 6       ;
-;      - LEDR~2       ; 0                 ; 6       ;
-;      - LEDR~3       ; 0                 ; 6       ;
-;      - LEDR~4       ; 0                 ; 6       ;
-;      - LEDR~6       ; 0                 ; 6       ;
-;      - LEDR~7       ; 0                 ; 6       ;
-; SW[0]               ;                   ;         ;
-;      - LEDR~0       ; 0                 ; 6       ;
-; SW[12]              ;                   ;         ;
-;      - LEDR~1       ; 1                 ; 6       ;
-; SW[5]               ;                   ;         ;
-;      - LEDR~3       ; 0                 ; 6       ;
-; SW[9]               ;                   ;         ;
-;      - LEDR~2       ; 1                 ; 6       ;
-; SW[1]               ;                   ;         ;
-;      - LEDR~2       ; 0                 ; 6       ;
-; SW[13]              ;                   ;         ;
-;      - LEDR~3       ; 0                 ; 6       ;
-; SW[10]              ;                   ;         ;
-;      - LEDR~5       ; 0                 ; 6       ;
-; SW[6]               ;                   ;         ;
-;      - LEDR~4       ; 0                 ; 6       ;
-; SW[2]               ;                   ;         ;
-;      - LEDR~4       ; 0                 ; 6       ;
-; SW[14]              ;                   ;         ;
-;      - LEDR~5       ; 1                 ; 6       ;
-; SW[7]               ;                   ;         ;
-;      - LEDR~7       ; 0                 ; 6       ;
-; SW[11]              ;                   ;         ;
-;      - LEDR~6       ; 0                 ; 6       ;
-; SW[3]               ;                   ;         ;
-;      - LEDR~6       ; 0                 ; 6       ;
-; SW[15]              ;                   ;         ;
-;      - LEDR~7       ; 1                 ; 6       ;
-+---------------------+-------------------+---------+
++------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                               ;
++------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                            ; Pad To Core Index ; Setting ;
++------------------------------------------------+-------------------+---------+
+; SW[8]                                          ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[0]~1 ; 1                 ; 6       ;
+; SW[17]                                         ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[0]~0 ; 0                 ; 6       ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[0]~1 ; 0                 ; 6       ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[1]~2 ; 0                 ; 6       ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[2]~4 ; 0                 ; 6       ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[2]~5 ; 0                 ; 6       ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[3]~6 ; 0                 ; 6       ;
+; SW[4]                                          ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[0]~0 ; 0                 ; 6       ;
+; SW[16]                                         ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[0]~0 ; 0                 ; 6       ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[1]~2 ; 0                 ; 6       ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[1]~3 ; 0                 ; 6       ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[2]~4 ; 0                 ; 6       ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[3]~6 ; 0                 ; 6       ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[3]~7 ; 0                 ; 6       ;
+; SW[0]                                          ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[0]~0 ; 0                 ; 6       ;
+; SW[12]                                         ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[0]~1 ; 1                 ; 6       ;
+; SW[5]                                          ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[1]~3 ; 0                 ; 6       ;
+; SW[9]                                          ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[1]~2 ; 1                 ; 6       ;
+; SW[1]                                          ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[1]~2 ; 0                 ; 6       ;
+; SW[13]                                         ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[1]~3 ; 0                 ; 6       ;
+; SW[10]                                         ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[2]~5 ; 0                 ; 6       ;
+; SW[6]                                          ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[2]~4 ; 0                 ; 6       ;
+; SW[2]                                          ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[2]~4 ; 0                 ; 6       ;
+; SW[14]                                         ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[2]~5 ; 1                 ; 6       ;
+; SW[7]                                          ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[3]~7 ; 0                 ; 6       ;
+; SW[11]                                         ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[3]~6 ; 0                 ; 6       ;
+; SW[3]                                          ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[3]~6 ; 0                 ; 6       ;
+; SW[15]                                         ;                   ;         ;
+;      - FourBit4to1MuxInternal:comb_3|LEDR[3]~7 ; 1                 ; 6       ;
++------------------------------------------------+-------------------+---------+
 
 
 +------------------------------------------------+
@@ -3081,7 +3082,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.07 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -3090,10 +3091,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/User/Documents/KevinYang/FourBit4to1Mux/output_files/FourBit4to1Mux.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 510 warnings
-    Info: Peak virtual memory: 5434 megabytes
-    Info: Processing ended: Mon Nov  4 15:09:11 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 5433 megabytes
+    Info: Processing ended: Tue Nov  5 23:46:10 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +----------------------------+

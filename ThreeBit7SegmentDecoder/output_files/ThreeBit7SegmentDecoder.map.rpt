@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ThreeBit7SegmentDecoder
-Mon Nov  4 13:44:15 2024
+Wed Nov  6 00:03:34 2024
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov  4 13:44:15 2024       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov  6 00:03:34 2024       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; ThreeBit7SegmentDecoder                     ;
 ; Top-level Entity Name              ; ThreeBit7SegmentDecoder                     ;
@@ -52,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Total combinational functions  ; 7                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 13                                          ;
+; Total pins                         ; 10                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -192,14 +192,14 @@ https://fpgasoftware.intel.com/eula.
 ;     -- Dedicated logic registers            ; 0           ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 13          ;
+; I/O pins                                    ; 10          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; SW[1]~input ;
 ; Maximum fan-out                             ; 7           ;
-; Total fan-out                               ; 41          ;
-; Average fan-out                             ; 1.24        ;
+; Total fan-out                               ; 38          ;
+; Average fan-out                             ; 1.41        ;
 +---------------------------------------------+-------------+
 
 
@@ -208,7 +208,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+---------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Entity Name                     ; Library Name ;
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+---------------------------------+--------------+
-; |ThreeBit7SegmentDecoder                    ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |ThreeBit7SegmentDecoder                                        ; ThreeBit7SegmentDecoder         ; work         ;
+; |ThreeBit7SegmentDecoder                    ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |ThreeBit7SegmentDecoder                                        ; ThreeBit7SegmentDecoder         ; work         ;
 ;    |ThreeBit7SegmentDecoderInternal:comb_3| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThreeBit7SegmentDecoder|ThreeBit7SegmentDecoderInternal:comb_3 ; ThreeBit7SegmentDecoderInternal ; work         ;
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+---------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -234,15 +234,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 13                          ;
-; cycloneiii_lcell_comb ; 14                          ;
-;     normal            ; 14                          ;
-;         0 data inputs ; 1                           ;
+; boundary_port         ; 10                          ;
+; cycloneiii_lcell_comb ; 13                          ;
+;     normal            ; 13                          ;
 ;         1 data inputs ; 6                           ;
 ;         3 data inputs ; 7                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.82                        ;
+; Average LUT depth     ; 1.94                        ;
 +-----------------------+-----------------------------+
 
 
@@ -261,7 +260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Mon Nov  4 13:44:00 2024
+    Info: Processing started: Wed Nov  6 00:03:20 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ThreeBit7SegmentDecoder -c ThreeBit7SegmentDecoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -277,23 +276,18 @@ Warning (10236): Verilog HDL Implicit Net warning at ThreeBit7SegmentDecoder.v(1
 Warning (10236): Verilog HDL Implicit Net warning at ThreeBit7SegmentDecoder.v(17): created implicit net for "Gt" File: C:/Users/User/Documents/KevinYang/ThreeBit7SegmentDecoder/ThreeBit7SegmentDecoder.v Line: 17
 Critical Warning (10846): Verilog HDL Instantiation warning at ThreeBit7SegmentDecoder.v(2): instance has no name File: C:/Users/User/Documents/KevinYang/ThreeBit7SegmentDecoder/ThreeBit7SegmentDecoder.v Line: 2
 Info (12127): Elaborating entity "ThreeBit7SegmentDecoder" for the top level hierarchy
-Warning (10034): Output port "LEDR" at ThreeBit7SegmentDecoder.v(1) has no driver File: C:/Users/User/Documents/KevinYang/ThreeBit7SegmentDecoder/ThreeBit7SegmentDecoder.v Line: 1
 Info (12128): Elaborating entity "ThreeBit7SegmentDecoderInternal" for hierarchy "ThreeBit7SegmentDecoderInternal:comb_3" File: C:/Users/User/Documents/KevinYang/ThreeBit7SegmentDecoder/ThreeBit7SegmentDecoder.v Line: 2
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/User/Documents/KevinYang/ThreeBit7SegmentDecoder/ThreeBit7SegmentDecoder.v Line: 1
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/User/Documents/KevinYang/ThreeBit7SegmentDecoder/ThreeBit7SegmentDecoder.v Line: 1
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/User/Documents/KevinYang/ThreeBit7SegmentDecoder/ThreeBit7SegmentDecoder.v Line: 1
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 10 output pins
+    Info (21059): Implemented 7 output pins
     Info (21061): Implemented 7 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4750 megabytes
-    Info: Processing ended: Mon Nov  4 13:44:15 2024
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:29
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4745 megabytes
+    Info: Processing ended: Wed Nov  6 00:03:34 2024
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:30
 
 

@@ -1,5 +1,5 @@
 Fitter report for FourBit2to1Mux
-Mon Nov  4 14:37:44 2024
+Tue Nov  5 23:07:07 2024
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Nov  4 14:37:44 2024       ;
+; Fitter Status                      ; Successful - Tue Nov  5 23:07:07 2024       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; FourBit2to1Mux                              ;
 ; Top-level Entity Name              ; FourBit2to1Mux                              ;
@@ -3031,7 +3031,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -3045,17 +3045,17 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/User/Documents/KevinYang/FourBit2to1Mux/output_files/FourBit2to1Mux.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 510 warnings
-    Info: Peak virtual memory: 5434 megabytes
-    Info: Processing ended: Mon Nov  4 14:37:45 2024
+    Info: Peak virtual memory: 5429 megabytes
+    Info: Processing ended: Tue Nov  5 23:07:07 2024
     Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:16
 

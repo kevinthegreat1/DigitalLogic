@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FourBit4to1Mux
-Mon Nov  4 15:08:58 2024
+Tue Nov  5 23:45:56 2024
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -15,7 +15,7 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "FourBit2to1MuxInternal:comb_4"
+ 10. Port Connectivity Checks: "FourBit4to1MuxInternal:comb_3|FourBit2to1MuxInternal:comb_4"
  11. Post-Synthesis Netlist Statistics for Top Partition
  12. Elapsed Time Per Partition
  13. Analysis & Synthesis Messages
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov  4 15:08:58 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov  5 23:45:56 2024       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; FourBit4to1Mux                              ;
 ; Top-level Entity Name              ; FourBit4to1Mux                              ;
@@ -206,13 +206,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
-; |FourBit4to1Mux            ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |FourBit4to1Mux     ; FourBit4to1Mux ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                   ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name            ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+------------------------+--------------+
+; |FourBit4to1Mux                    ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |FourBit4to1Mux                               ; FourBit4to1Mux         ; work         ;
+;    |FourBit4to1MuxInternal:comb_3| ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FourBit4to1Mux|FourBit4to1MuxInternal:comb_3 ; FourBit4to1MuxInternal ; work         ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -231,22 +232,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FourBit4to1Mux|LEDR       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FourBit4to1Mux|FourBit4to1MuxInternal:comb_3|LEDR[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FourBit2to1MuxInternal:comb_4"                                                                                                                                                    ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; SW   ; Input ; Warning  ; Input port expression (18 bits) is wider than the input port (8 bits) it drives.  The 10 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FourBit4to1MuxInternal:comb_3|FourBit2to1MuxInternal:comb_4"                                                                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                           ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; SW   ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -279,20 +280,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Mon Nov  4 15:08:44 2024
+    Info: Processing started: Tue Nov  5 23:45:42 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FourBit4to1Mux -c FourBit4to1Mux
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file /users/user/documents/kevinyang/fourbit2to1mux/fourbit2to1mux.v
     Info (12023): Found entity 1: FourBit2to1Mux File: C:/Users/User/Documents/KevinYang/FourBit2to1Mux/FourBit2to1Mux.v Line: 1
     Info (12023): Found entity 2: FourBit2to1MuxInternal File: C:/Users/User/Documents/KevinYang/FourBit2to1Mux/FourBit2to1Mux.v Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file fourbit4to1mux.v
+Info (12021): Found 2 design units, including 2 entities, in source file fourbit4to1mux.v
     Info (12023): Found entity 1: FourBit4to1Mux File: C:/Users/User/Documents/KevinYang/FourBit4to1Mux/FourBit4to1Mux.v Line: 1
+    Info (12023): Found entity 2: FourBit4to1MuxInternal File: C:/Users/User/Documents/KevinYang/FourBit4to1Mux/FourBit4to1Mux.v Line: 5
 Critical Warning (10846): Verilog HDL Instantiation warning at FourBit2to1Mux.v(2): instance has no name File: C:/Users/User/Documents/KevinYang/FourBit2to1Mux/FourBit2to1Mux.v Line: 2
-Critical Warning (10846): Verilog HDL Instantiation warning at FourBit4to1Mux.v(3): instance has no name File: C:/Users/User/Documents/KevinYang/FourBit4to1Mux/FourBit4to1Mux.v Line: 3
-Critical Warning (10846): Verilog HDL Instantiation warning at FourBit4to1Mux.v(4): instance has no name File: C:/Users/User/Documents/KevinYang/FourBit4to1Mux/FourBit4to1Mux.v Line: 4
+Critical Warning (10846): Verilog HDL Instantiation warning at FourBit4to1Mux.v(7): instance has no name File: C:/Users/User/Documents/KevinYang/FourBit4to1Mux/FourBit4to1Mux.v Line: 7
+Critical Warning (10846): Verilog HDL Instantiation warning at FourBit4to1Mux.v(8): instance has no name File: C:/Users/User/Documents/KevinYang/FourBit4to1Mux/FourBit4to1Mux.v Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at FourBit4to1Mux.v(2): instance has no name File: C:/Users/User/Documents/KevinYang/FourBit4to1Mux/FourBit4to1Mux.v Line: 2
 Info (12127): Elaborating entity "FourBit4to1Mux" for the top level hierarchy
-Info (12128): Elaborating entity "FourBit2to1MuxInternal" for hierarchy "FourBit2to1MuxInternal:comb_3" File: C:/Users/User/Documents/KevinYang/FourBit4to1Mux/FourBit4to1Mux.v Line: 3
+Info (12128): Elaborating entity "FourBit4to1MuxInternal" for hierarchy "FourBit4to1MuxInternal:comb_3" File: C:/Users/User/Documents/KevinYang/FourBit4to1Mux/FourBit4to1Mux.v Line: 2
+Info (12128): Elaborating entity "FourBit2to1MuxInternal" for hierarchy "FourBit4to1MuxInternal:comb_3|FourBit2to1MuxInternal:comb_3" File: C:/Users/User/Documents/KevinYang/FourBit4to1Mux/FourBit4to1Mux.v Line: 7
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -301,10 +305,10 @@ Info (21057): Implemented 30 device resources after synthesis - the final resour
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 4 output pins
     Info (21061): Implemented 8 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4752 megabytes
-    Info: Processing ended: Mon Nov  4 15:08:58 2024
+    Info: Processing ended: Tue Nov  5 23:45:56 2024
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Total CPU time (on all processors): 00:00:30
 
 

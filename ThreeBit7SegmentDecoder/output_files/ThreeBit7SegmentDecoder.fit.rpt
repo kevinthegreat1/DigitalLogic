@@ -1,5 +1,5 @@
 Fitter report for ThreeBit7SegmentDecoder
-Mon Nov  4 13:44:29 2024
+Wed Nov  6 00:03:48 2024
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Nov  4 13:44:29 2024       ;
+; Fitter Status                      ; Successful - Wed Nov  6 00:03:48 2024       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; ThreeBit7SegmentDecoder                     ;
 ; Top-level Entity Name              ; ThreeBit7SegmentDecoder                     ;
@@ -75,7 +75,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Total combinational functions  ; 7 / 114,480 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                         ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 13 / 529 ( 2 % )                            ;
+; Total pins                         ; 10 / 529 ( 2 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -156,7 +156,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -518,6 +518,7 @@ https://fpgasoftware.intel.com/eula.
 ; Location     ;                         ;              ; LEDG[6]          ; PIN_G22       ; QSF Assignment ;
 ; Location     ;                         ;              ; LEDG[7]          ; PIN_G21       ; QSF Assignment ;
 ; Location     ;                         ;              ; LEDG[8]          ; PIN_F17       ; QSF Assignment ;
+; Location     ;                         ;              ; LEDR[0]          ; PIN_G19       ; QSF Assignment ;
 ; Location     ;                         ;              ; LEDR[10]         ; PIN_J15       ; QSF Assignment ;
 ; Location     ;                         ;              ; LEDR[11]         ; PIN_H16       ; QSF Assignment ;
 ; Location     ;                         ;              ; LEDR[12]         ; PIN_J16       ; QSF Assignment ;
@@ -526,6 +527,8 @@ https://fpgasoftware.intel.com/eula.
 ; Location     ;                         ;              ; LEDR[15]         ; PIN_G15       ; QSF Assignment ;
 ; Location     ;                         ;              ; LEDR[16]         ; PIN_G16       ; QSF Assignment ;
 ; Location     ;                         ;              ; LEDR[17]         ; PIN_H15       ; QSF Assignment ;
+; Location     ;                         ;              ; LEDR[1]          ; PIN_F19       ; QSF Assignment ;
+; Location     ;                         ;              ; LEDR[2]          ; PIN_E19       ; QSF Assignment ;
 ; Location     ;                         ;              ; LEDR[3]          ; PIN_F21       ; QSF Assignment ;
 ; Location     ;                         ;              ; LEDR[4]          ; PIN_F18       ; QSF Assignment ;
 ; Location     ;                         ;              ; LEDR[5]          ; PIN_E18       ; QSF Assignment ;
@@ -1030,6 +1033,7 @@ https://fpgasoftware.intel.com/eula.
 ; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDG[6]          ; 2.5 V         ; QSF Assignment ;
 ; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDG[7]          ; 2.5 V         ; QSF Assignment ;
 ; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDG[8]          ; 2.5 V         ; QSF Assignment ;
+; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDR[0]          ; 2.5 V         ; QSF Assignment ;
 ; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDR[10]         ; 2.5 V         ; QSF Assignment ;
 ; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDR[11]         ; 2.5 V         ; QSF Assignment ;
 ; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDR[12]         ; 2.5 V         ; QSF Assignment ;
@@ -1038,6 +1042,8 @@ https://fpgasoftware.intel.com/eula.
 ; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDR[15]         ; 2.5 V         ; QSF Assignment ;
 ; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDR[16]         ; 2.5 V         ; QSF Assignment ;
 ; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDR[17]         ; 2.5 V         ; QSF Assignment ;
+; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDR[1]          ; 2.5 V         ; QSF Assignment ;
+; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDR[2]          ; 2.5 V         ; QSF Assignment ;
 ; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDR[3]          ; 2.5 V         ; QSF Assignment ;
 ; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDR[4]          ; 2.5 V         ; QSF Assignment ;
 ; I/O Standard ; ThreeBit7SegmentDecoder ;              ; LEDR[5]          ; 2.5 V         ; QSF Assignment ;
@@ -1198,8 +1204,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+-------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 44 ) ; 0.00 % ( 0 / 44 )          ; 0.00 % ( 0 / 44 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 44 ) ; 0.00 % ( 0 / 44 )          ; 0.00 % ( 0 / 44 )        ;
+;     -- Requested    ; 0.00 % ( 0 / 38 ) ; 0.00 % ( 0 / 38 )          ; 0.00 % ( 0 / 38 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 38 ) ; 0.00 % ( 0 / 38 )          ; 0.00 % ( 0 / 38 )        ;
 ;                     ;                   ;                            ;                          ;
 ; Routing (by net)    ;                   ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -1222,7 +1228,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 34 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 28 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -1259,7 +1265,7 @@ The pin-out file can be found in C:/Users/User/Documents/KevinYang/ThreeBit7Segm
 ;                                             ;                       ;
 ; Total LABs:  partially or completely used   ; 1 / 7,155 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 13 / 529 ( 2 % )      ;
+; I/O pins                                    ; 10 / 529 ( 2 % )      ;
 ;     -- Clock pins                           ; 0 / 7 ( 0 % )         ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )         ;
 ;                                             ;                       ;
@@ -1279,8 +1285,8 @@ The pin-out file can be found in C:/Users/User/Documents/KevinYang/ThreeBit7Segm
 ; Peak interconnect usage (total/H/V)         ; 0.2% / 0.2% / 0.4%    ;
 ; Maximum fan-out                             ; 7                     ;
 ; Highest non-global fan-out                  ; 7                     ;
-; Total fan-out                               ; 46                    ;
-; Average fan-out                             ; 1.07                  ;
+; Total fan-out                               ; 43                    ;
+; Average fan-out                             ; 1.16                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -1315,7 +1321,7 @@ The pin-out file can be found in C:/Users/User/Documents/KevinYang/ThreeBit7Segm
 ; Total LABs:  partially or completely used   ; 1 / 7155 ( < 1 % )   ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
-; I/O pins                                    ; 13                   ; 0                              ;
+; I/O pins                                    ; 10                   ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 532 ( 0 % )      ; 0 / 532 ( 0 % )                ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
@@ -1327,7 +1333,7 @@ The pin-out file can be found in C:/Users/User/Documents/KevinYang/ThreeBit7Segm
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 41                   ; 5                              ;
+;     -- Total Connections                    ; 38                   ; 5                              ;
 ;     -- Registered Connections               ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
@@ -1336,7 +1342,7 @@ The pin-out file can be found in C:/Users/User/Documents/KevinYang/ThreeBit7Segm
 ;                                             ;                      ;                                ;
 ; Partition Interface                         ;                      ;                                ;
 ;     -- Input Ports                          ; 3                    ; 0                              ;
-;     -- Output Ports                         ; 10                   ; 0                              ;
+;     -- Output Ports                         ; 7                    ; 0                              ;
 ;     -- Bidir Ports                          ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Registered Ports                            ;                      ;                                ;
@@ -1378,9 +1384,6 @@ The pin-out file can be found in C:/Users/User/Documents/KevinYang/ThreeBit7Segm
 ; HEX0[4] ; L25   ; 6        ; 115          ; 54           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX0[5] ; J22   ; 6        ; 115          ; 67           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; HEX0[6] ; H22   ; 6        ; 115          ; 69           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; LEDR[0] ; G19   ; 7        ; 69           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; LEDR[1] ; F19   ; 7        ; 94           ; 73           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; LEDR[2] ; E19   ; 7        ; 94           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -1416,7 +1419,7 @@ The pin-out file can be found in C:/Users/User/Documents/KevinYang/ThreeBit7Segm
 ; 4        ; 0 / 71 ( 0 % ) ; 2.5V          ; --           ;
 ; 5        ; 3 / 65 ( 5 % ) ; 2.5V          ; --           ;
 ; 6        ; 5 / 58 ( 9 % ) ; 2.5V          ; --           ;
-; 7        ; 6 / 72 ( 8 % ) ; 2.5V          ; --           ;
+; 7        ; 3 / 72 ( 4 % ) ; 2.5V          ; --           ;
 ; 8        ; 0 / 71 ( 0 % ) ; 2.5V          ; --           ;
 +----------+----------------+---------------+--------------+
 
@@ -1776,7 +1779,7 @@ The pin-out file can be found in C:/Users/User/Documents/KevinYang/ThreeBit7Segm
 ; E16      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; E17      ; 456        ; 7        ; HEX0[2]                                                   ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; E18      ; 427        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; E19      ; 421        ; 7        ; LEDR[2]                                                   ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
+; E19      ; 421        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E20      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; E21      ; 407        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E22      ; 403        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -1804,7 +1807,7 @@ The pin-out file can be found in C:/Users/User/Documents/KevinYang/ThreeBit7Segm
 ; F16      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F17      ; 455        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F18      ; 428        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; F19      ; 420        ; 7        ; LEDR[1]                                                   ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
+; F19      ; 420        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F20      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F21      ; 408        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F22      ; 409        ; 7        ; HEX0[1]                                                   ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
@@ -1832,7 +1835,7 @@ The pin-out file can be found in C:/Users/User/Documents/KevinYang/ThreeBit7Segm
 ; G16      ; 453        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G17      ; 437        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; G18      ; 452        ; 7        ; HEX0[0]                                                   ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
-; G19      ; 451        ; 7        ; LEDR[0]                                                   ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
+; G19      ; 451        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G20      ; 444        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G21      ; 445        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G22      ; 449        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -2222,9 +2225,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; HEX0[4]  ; Missing drive strength and slew rate ;
 ; HEX0[5]  ; Missing drive strength and slew rate ;
 ; HEX0[6]  ; Missing drive strength and slew rate ;
-; LEDR[0]  ; Missing drive strength and slew rate ;
-; LEDR[1]  ; Missing drive strength and slew rate ;
-; LEDR[2]  ; Missing drive strength and slew rate ;
 +----------+--------------------------------------+
 
 
@@ -2233,7 +2233,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------+---------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                             ; Entity Name                     ; Library Name ;
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------+---------------------------------+--------------+
-; |ThreeBit7SegmentDecoder                    ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 13   ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |ThreeBit7SegmentDecoder                                        ; ThreeBit7SegmentDecoder         ; work         ;
+; |ThreeBit7SegmentDecoder                    ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 10   ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |ThreeBit7SegmentDecoder                                        ; ThreeBit7SegmentDecoder         ; work         ;
 ;    |ThreeBit7SegmentDecoderInternal:comb_3| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |ThreeBit7SegmentDecoder|ThreeBit7SegmentDecoderInternal:comb_3 ; ThreeBit7SegmentDecoderInternal ; work         ;
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------+---------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -2251,9 +2251,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HEX0[4] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; HEX0[5] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; HEX0[6] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; LEDR[0] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; LEDR[1] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; LEDR[2] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[1]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[0]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[2]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
@@ -2433,9 +2430,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 13        ; 0            ; 13        ; 0            ; 0            ; 13        ; 13        ; 0            ; 13        ; 13        ; 0            ; 10           ; 0            ; 0            ; 3            ; 0            ; 10           ; 3            ; 0            ; 0            ; 0            ; 10           ; 0            ; 0            ; 0            ; 0            ; 0            ; 13        ; 0            ; 0            ;
+; Total Pass         ; 10        ; 0            ; 10        ; 0            ; 0            ; 10        ; 10        ; 0            ; 10        ; 10        ; 0            ; 7            ; 0            ; 0            ; 3            ; 0            ; 7            ; 3            ; 0            ; 0            ; 0            ; 7            ; 0            ; 0            ; 0            ; 0            ; 0            ; 10        ; 0            ; 0            ;
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 13           ; 0         ; 13           ; 13           ; 0         ; 0         ; 13           ; 0         ; 0         ; 13           ; 3            ; 13           ; 13           ; 10           ; 13           ; 3            ; 10           ; 13           ; 13           ; 13           ; 3            ; 13           ; 13           ; 13           ; 13           ; 13           ; 0         ; 13           ; 13           ;
+; Total Inapplicable ; 0         ; 10           ; 0         ; 10           ; 10           ; 0         ; 0         ; 10           ; 0         ; 0         ; 10           ; 3            ; 10           ; 10           ; 7            ; 10           ; 3            ; 7            ; 10           ; 10           ; 10           ; 3            ; 10           ; 10           ; 10           ; 10           ; 10           ; 0         ; 10           ; 10           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; HEX0[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; HEX0[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2444,9 +2441,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HEX0[4]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; HEX0[5]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; HEX0[6]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[2]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[2]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2880,6 +2874,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "LEDG[6]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDG[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDG[8]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[10]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[11]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[12]" is assigned to location or region, but does not exist in design
@@ -2888,6 +2883,8 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "LEDR[15]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[16]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[17]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[4]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[5]" is assigned to location or region, but does not exist in design
@@ -3053,19 +3050,19 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/User/Documents/KevinYang/ThreeBit7SegmentDecoder/output_files/ThreeBit7SegmentDecoder.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 519 warnings
-    Info: Peak virtual memory: 5430 megabytes
-    Info: Processing ended: Mon Nov  4 13:44:30 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:16
+Info: Quartus Prime Fitter was successful. 0 errors, 522 warnings
+    Info: Peak virtual memory: 5431 megabytes
+    Info: Processing ended: Wed Nov  6 00:03:48 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +----------------------------+

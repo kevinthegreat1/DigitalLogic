@@ -3,5 +3,6 @@ module FourBit2to1Mux(input [17:0]SW, output [3:0]LEDR);
 endmodule
 
 module FourBit2to1MuxInternal(input s, input [7:0]SW, output [3:0]LEDR);
-	assign LEDR = s ? SW[7:4] : SW[3:0];
+	assign LEDR = {4{s}} & SW[7:4] | {4{~s}} & SW [3:0];
+//	assign LEDR = s ? SW[7:4] : SW[3:0];
 endmodule

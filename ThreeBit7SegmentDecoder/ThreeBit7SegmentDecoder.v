@@ -1,4 +1,4 @@
-module ThreeBit7SegmentDecoder(input [2:0]SW, output [6:0]HEX0, output [2:0]LEDR);
+module ThreeBit7SegmentDecoder(input [2:0]SW, output [6:0]HEX0);
 	ThreeBit7SegmentDecoderInternal(SW[2], SW[1], SW[0], HEX0[0], HEX0[1], HEX0[2], HEX0[3], HEX0[4], HEX0[5], HEX0[6]);
 endmodule
 
