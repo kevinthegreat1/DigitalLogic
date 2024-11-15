@@ -1,0 +1,3 @@
+module SRNorLatch(input S, input R, output Q);
+	
+endmodule

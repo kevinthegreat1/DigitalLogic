@@ -1,0 +1,9 @@
+module TFlipFlop(input T, input CLK, output Q, output Qbar);
+	wire QInternal;
+	wire QbarInternal;
+
+	SRNorLatch(T & CLK & QInternal, T & CLK & QbarInternal, QInternal, QbarInternal);
+
+	assign Q = QInternal;
+	assign Qbar = QbarInternal;
+endmodule

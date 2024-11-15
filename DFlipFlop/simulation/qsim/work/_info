@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\User\Documents\KevinYang\DFlipFlop\simulation\qsim
+vDFlipFlop
+Z1 !s100 MMHMQE2coX2Il8IcPe[E91
+Z2 IJNNJf]bogda<a=7A]f5k03
+Z3 VR44BblBl`zdg]ncPUT@P?2
+Z4 dC:\Users\User\Documents\KevinYang\DFlipFlop\simulation\qsim
+Z5 w1731094491
+Z6 8DFlipFlop.vo
+Z7 FDFlipFlop.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|DFlipFlop.vo|
+Z10 o-work work -O0
+Z11 n@d@flip@flop
+!i10b 1
+!s85 0
+Z12 !s108 1731094492.526000
+Z13 !s107 DFlipFlop.vo|
+!s101 -O0
+vDFlipFlop_vlg_check_tst
+!i10b 1
+Z14 !s100 ]>Cnk82XIMiNjNB^B2K`G0
+Z15 IRz3VeBWAeYP>z=884XWV81
+Z16 VmcM;4RIF;B>0A;fkRE6cM2
+R4
+Z17 w1731094489
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z20 !s108 1731094492.604000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z23 n@d@flip@flop_vlg_check_tst
+vDFlipFlop_vlg_sample_tst
+!i10b 1
+Z24 !s100 Al>bWh?S<2zQNL=JNK6PO1
+Z25 IOQQdj0IO?;J4YThVGAm`G2
+Z26 V7Od2a818lV7km2@_z6R`R0
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@d@flip@flop_vlg_sample_tst
+vDFlipFlop_vlg_vec_tst
+!i10b 1
+!s100 f>f@X]cQcUQh4WU;?j08V1
+I1_Bc0Lej8R;coKiYUa?1l2
+Z28 VfVSKTcC1^P>H<za9N0_iR2
+R4
+R17
+R18
+R19
+Z29 L0 183
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@d@flip@flop_vlg_vec_tst

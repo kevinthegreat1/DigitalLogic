@@ -1,0 +1,3 @@
+module BinaryCounterTest(input [0]SW, input [0]KEY, output [7:0]LEDR);
+	
+endmodule

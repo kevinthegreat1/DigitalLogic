@@ -1,0 +1,4 @@
+module TFlipFlopTest(input [0:0]SW, input [0:0]KEY, output [0:0]LEDR);
+	wire Qbar;
+	TFlipFlop(SW[0], KEY[0], LEDR[0], Qbar);
+endmodule

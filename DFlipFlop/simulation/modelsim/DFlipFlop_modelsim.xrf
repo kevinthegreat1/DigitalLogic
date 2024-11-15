@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/User/Documents/KevinYang/DFlipFlop/SRNorLatch.v
+source_file = 1, C:/Users/User/Documents/KevinYang/DFlipFlop/DLatch.v
+source_file = 1, C:/Users/User/Documents/KevinYang/DFlipFlop/DFlipFlop.v
+source_file = 1, C:/Users/User/Documents/KevinYang/DFlipFlop/Waveform.vwf
+source_file = 1, C:/Users/User/Documents/KevinYang/DFlipFlop/db/DFlipFlop.cbx.xml
+design_name = DFlipFlop
+instance = comp, \Q~output , Q~output, DFlipFlop, 1
+instance = comp, \Qbar~output , Qbar~output, DFlipFlop, 1
+instance = comp, \D~input , D~input, DFlipFlop, 1
+instance = comp, \CLK~input , CLK~input, DFlipFlop, 1
