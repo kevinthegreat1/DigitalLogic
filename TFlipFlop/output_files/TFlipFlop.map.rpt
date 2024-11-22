@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TFlipFlop
-Fri Nov 15 16:44:00 2024
+Thu Nov 21 18:51:10 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -15,17 +15,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Logic Cells Representing Combinational Loops
   9. General Register Statistics
- 10. Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_16"
- 11. Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_14"
- 12. Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_12"
- 13. Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_10"
- 14. Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_8"
- 15. Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_6"
- 16. Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_4"
- 17. Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4"
- 18. Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_3"
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "TFlipFlop:comb_10"
+ 11. Port Connectivity Checks: "TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4"
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -51,13 +44,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 15 16:44:00 2024      ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 21 18:51:10 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; TFlipFlop                                  ;
-; Top-level Entity Name              ; BinaryCounterTest                          ;
+; Top-level Entity Name              ; BinaryCounter                              ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 16                                         ;
-;     Total combinational functions  ; 16                                         ;
+; Total logic elements               ; 25                                         ;
+;     Total combinational functions  ; 25                                         ;
 ;     Dedicated logic registers      ; 0                                          ;
 ; Total registers                    ; 0                                          ;
 ; Total pins                         ; 10                                         ;
@@ -74,7 +67,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; BinaryCounterTest  ; TFlipFlop          ;
+; Top-level entity name                                                      ; BinaryCounter      ; TFlipFlop          ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -172,132 +165,130 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                  ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
-; ../DFlipFlop/DLatch.v            ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/DFlipFlop/DLatch.v            ;         ;
-; ../DFlipFlop/DFlipFlop.v         ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/DFlipFlop/DFlipFlop.v         ;         ;
-; ../DFlipFlop/SRNorLatch.v        ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/DFlipFlop/SRNorLatch.v        ;         ;
-; TFlipFlop.v                      ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/TFlipFlop/TFlipFlop.v         ;         ;
-; BinaryCounter.v                  ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/TFlipFlop/BinaryCounter.v     ;         ;
-; BinaryCounterTest.v              ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/TFlipFlop/BinaryCounterTest.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                              ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
+; ../DFlipFlop/DLatch.v            ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/DFlipFlop/DLatch.v        ;         ;
+; ../DFlipFlop/DFlipFlop.v         ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/DFlipFlop/DFlipFlop.v     ;         ;
+; ../DFlipFlop/SRNorLatch.v        ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/DFlipFlop/SRNorLatch.v    ;         ;
+; TFlipFlop.v                      ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/TFlipFlop/TFlipFlop.v     ;         ;
+; BinaryCounter.v                  ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/TFlipFlop/BinaryCounter.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 16          ;
-;                                             ;             ;
-; Total combinational functions               ; 16          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 8           ;
-;     -- 3 input functions                    ; 8           ;
-;     -- <=2 input functions                  ; 0           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 16          ;
-;     -- arithmetic mode                      ; 0           ;
-;                                             ;             ;
-; Total registers                             ; 0           ;
-;     -- Dedicated logic registers            ; 0           ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 10          ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-; Maximum fan-out node                        ; SW[0]~input ;
-; Maximum fan-out                             ; 8           ;
-; Total fan-out                               ; 74          ;
-; Average fan-out                             ; 2.06        ;
-+---------------------------------------------+-------------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 25      ;
+;                                             ;         ;
+; Total combinational functions               ; 25      ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 14      ;
+;     -- 3 input functions                    ; 9       ;
+;     -- <=2 input functions                  ; 2       ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 25      ;
+;     -- arithmetic mode                      ; 0       ;
+;                                             ;         ;
+; Total registers                             ; 0       ;
+;     -- Dedicated logic registers            ; 0       ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 10      ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+; Maximum fan-out node                        ; T~input ;
+; Maximum fan-out                             ; 8       ;
+; Total fan-out                               ; 105     ;
+; Average fan-out                             ; 2.33    ;
++---------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Library Name ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+--------------+
-; |BinaryCounterTest                 ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |BinaryCounterTest                                                                                              ; work         ;
-;    |BinaryCounter:comb_3|          ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3                                                                         ; work         ;
-;       |TFlipFlop:comb_10|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_10                                                       ; work         ;
-;          |DFlipFlop:comb_3|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_10|DFlipFlop:comb_3                                      ; work         ;
-;             |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_4                   ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
-;             |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_6                   ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
-;       |TFlipFlop:comb_12|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_12                                                       ; work         ;
-;          |DFlipFlop:comb_3|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_12|DFlipFlop:comb_3                                      ; work         ;
-;             |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_12|DFlipFlop:comb_3|DLatchKevin:comb_4                   ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_12|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
-;             |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_12|DFlipFlop:comb_3|DLatchKevin:comb_6                   ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_12|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
-;       |TFlipFlop:comb_14|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_14                                                       ; work         ;
-;          |DFlipFlop:comb_3|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_14|DFlipFlop:comb_3                                      ; work         ;
-;             |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_14|DFlipFlop:comb_3|DLatchKevin:comb_4                   ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_14|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
-;             |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_14|DFlipFlop:comb_3|DLatchKevin:comb_6                   ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_14|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
-;       |TFlipFlop:comb_16|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_16                                                       ; work         ;
-;          |DFlipFlop:comb_3|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_16|DFlipFlop:comb_3                                      ; work         ;
-;             |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_16|DFlipFlop:comb_3|DLatchKevin:comb_4                   ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_16|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
-;             |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_16|DFlipFlop:comb_3|DLatchKevin:comb_6                   ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_16|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
-;       |TFlipFlop:comb_3|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_3                                                        ; work         ;
-;          |DFlipFlop:comb_3|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3                                       ; work         ;
-;             |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4                    ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3  ; work         ;
-;             |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_6                    ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3  ; work         ;
-;       |TFlipFlop:comb_4|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_4                                                        ; work         ;
-;          |DFlipFlop:comb_3|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_4|DFlipFlop:comb_3                                       ; work         ;
-;             |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_4                    ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3  ; work         ;
-;             |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_6                    ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3  ; work         ;
-;       |TFlipFlop:comb_6|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_6                                                        ; work         ;
-;          |DFlipFlop:comb_3|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_6|DFlipFlop:comb_3                                       ; work         ;
-;             |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_4                    ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3  ; work         ;
-;             |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_6                    ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3  ; work         ;
-;       |TFlipFlop:comb_8|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_8                                                        ; work         ;
-;          |DFlipFlop:comb_3|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_8|DFlipFlop:comb_3                                       ; work         ;
-;             |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_4                    ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3  ; work         ;
-;             |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_6                    ; work         ;
-;                |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3  ; work         ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                 ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                    ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
+; |BinaryCounter                  ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |BinaryCounter                                                                         ; work         ;
+;    |TFlipFlop:comb_10|          ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_10                                                       ; work         ;
+;       |DFlipFlop:comb_3|        ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_10|DFlipFlop:comb_3                                      ; work         ;
+;          |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_4                   ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
+;          |DLatchKevin:comb_6|   ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_6                   ; work         ;
+;             |SRNorLatch:comb_3| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
+;    |TFlipFlop:comb_3|           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_3                                                        ; work         ;
+;       |DFlipFlop:comb_3|        ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_3|DFlipFlop:comb_3                                       ; work         ;
+;          |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4                    ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3  ; work         ;
+;          |DLatchKevin:comb_6|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_6                    ; work         ;
+;             |SRNorLatch:comb_3| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3  ; work         ;
+;    |TFlipFlop:comb_4|           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_4                                                        ; work         ;
+;       |DFlipFlop:comb_3|        ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_4|DFlipFlop:comb_3                                       ; work         ;
+;          |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_4                    ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3  ; work         ;
+;          |DLatchKevin:comb_6|   ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_6                    ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3  ; work         ;
+;    |TFlipFlop:comb_5|           ; 4 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_5                                                        ; work         ;
+;       |DFlipFlop:comb_3|        ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_5|DFlipFlop:comb_3                                       ; work         ;
+;          |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_5|DFlipFlop:comb_3|DLatchKevin:comb_4                    ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_5|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3  ; work         ;
+;          |DLatchKevin:comb_6|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_5|DFlipFlop:comb_3|DLatchKevin:comb_6                    ; work         ;
+;             |SRNorLatch:comb_3| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_5|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3  ; work         ;
+;    |TFlipFlop:comb_6|           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_6                                                        ; work         ;
+;       |DFlipFlop:comb_3|        ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_6|DFlipFlop:comb_3                                       ; work         ;
+;          |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_4                    ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3  ; work         ;
+;          |DLatchKevin:comb_6|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_6                    ; work         ;
+;             |SRNorLatch:comb_3| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3  ; work         ;
+;    |TFlipFlop:comb_7|           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_7                                                        ; work         ;
+;       |DFlipFlop:comb_3|        ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_7|DFlipFlop:comb_3                                       ; work         ;
+;          |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_7|DFlipFlop:comb_3|DLatchKevin:comb_4                    ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_7|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3  ; work         ;
+;          |DLatchKevin:comb_6|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_7|DFlipFlop:comb_3|DLatchKevin:comb_6                    ; work         ;
+;             |SRNorLatch:comb_3| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_7|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3  ; work         ;
+;    |TFlipFlop:comb_8|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_8                                                        ; work         ;
+;       |DFlipFlop:comb_3|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_8|DFlipFlop:comb_3                                       ; work         ;
+;          |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_4                    ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3  ; work         ;
+;          |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_6                    ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3  ; work         ;
+;    |TFlipFlop:comb_9|           ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_9                                                        ; work         ;
+;       |DFlipFlop:comb_3|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_9|DFlipFlop:comb_3                                       ; work         ;
+;          |DLatchKevin:comb_4|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_9|DFlipFlop:comb_3|DLatchKevin:comb_4                    ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_9|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3  ; work         ;
+;          |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_9|DFlipFlop:comb_3|DLatchKevin:comb_6                    ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BinaryCounter|TFlipFlop:comb_9|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3  ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops                                                          ;
-+--------------------------------------------------------------------------------------------------+----+
-; Logic Cell Name                                                                                  ;    ;
-+--------------------------------------------------------------------------------------------------+----+
-; BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0  ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0  ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0  ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0  ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_12|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_14|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_16|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0  ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0  ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0  ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0  ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_12|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_14|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
-; BinaryCounter:comb_3|TFlipFlop:comb_16|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
-; Number of logic cells representing combinational loops                                           ; 16 ;
-+--------------------------------------------------------------------------------------------------+----+
++----------------------------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                                     ;
++-----------------------------------------------------------------------------+----+
+; Logic Cell Name                                                             ;    ;
++-----------------------------------------------------------------------------+----+
+; TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_5|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_7|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_9|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
+; TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_5|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_7|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_9|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0  ;    ;
+; TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
+; Number of logic cells representing combinational loops                      ; 16 ;
++-----------------------------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -317,7 +308,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_16"                                             ;
+; Port Connectivity Checks: "TFlipFlop:comb_10"                                                                  ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -326,70 +317,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_14"                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_12"                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_10"                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_8"                                              ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_6"                                              ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_4"                                              ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4"          ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BinaryCounter:comb_3|TFlipFlop:comb_3"                                              ;
+; Port Connectivity Checks: "TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4"                               ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -412,7 +340,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Nov 15 16:43:58 2024
+    Info: Processing started: Thu Nov 21 18:51:08 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TFlipFlop -c TFlipFlop
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file /users/user/documents/kevinyang/dflipflop/dlatch.v
@@ -443,23 +371,22 @@ Critical Warning (10846): Verilog HDL Instantiation warning at BinaryCounter.v(8
 Critical Warning (10846): Verilog HDL Instantiation warning at BinaryCounter.v(9): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at BinaryCounter.v(10): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at BinaryCounterTest.v(2): instance has no name
-Info (12127): Elaborating entity "BinaryCounterTest" for the top level hierarchy
-Info (12128): Elaborating entity "BinaryCounter" for hierarchy "BinaryCounter:comb_3"
-Info (12128): Elaborating entity "TFlipFlop" for hierarchy "BinaryCounter:comb_3|TFlipFlop:comb_3"
-Info (12128): Elaborating entity "DFlipFlop" for hierarchy "BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3"
-Info (12128): Elaborating entity "DLatchKevin" for hierarchy "BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4"
-Info (12128): Elaborating entity "SRNorLatch" for hierarchy "BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3"
+Info (12127): Elaborating entity "BinaryCounter" for the top level hierarchy
+Info (12128): Elaborating entity "TFlipFlop" for hierarchy "TFlipFlop:comb_3"
+Info (12128): Elaborating entity "DFlipFlop" for hierarchy "TFlipFlop:comb_3|DFlipFlop:comb_3"
+Info (12128): Elaborating entity "DLatchKevin" for hierarchy "TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4"
+Info (12128): Elaborating entity "SRNorLatch" for hierarchy "TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 35 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 16 logic cells
+    Info (21061): Implemented 25 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 14 warnings
     Info: Peak virtual memory: 4628 megabytes
-    Info: Processing ended: Fri Nov 15 16:44:00 2024
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Thu Nov 21 18:51:11 2024
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Nov 15 16:44:18 2024
+Fitter Status : Successful - Thu Nov 21 18:51:31 2024
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : TFlipFlop
-Top-level Entity Name : BinaryCounterTest
+Top-level Entity Name : BinaryCounter
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 16 / 114,480 ( < 1 % )
-    Total combinational functions : 16 / 114,480 ( < 1 % )
+Total logic elements : 25 / 114,480 ( < 1 % )
+    Total combinational functions : 25 / 114,480 ( < 1 % )
     Dedicated logic registers : 0 / 114,480 ( 0 % )
 Total registers : 0
 Total pins : 10 / 529 ( 2 % )

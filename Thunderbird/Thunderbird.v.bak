@@ -1,0 +1,7 @@
+module Thunderbird(input L, input R, input Reset, input CLK, output [2:0]L, output [2:0]R);
+	wire [2:0]LInternal, [2:0]LbarInternal, [2:0]RInternal, [2:0]RbarInternal;
+
+	DLatchKevin(~Reset & (L&~R | ~R&LbarInternal[2]&LbarInternal[1]&LInternal[0] | ~R&LbarInternal[2]&LInternal[1]&LInternal[0] | (L~^R)&LbarInternal[2]&LInternal[1]&LbarInternal[0]&RInternal[0]&RbarInternal[1]&RInternal[2]), CLK, LInternal[0], LbarInternal[0]);
+	DLatchKevin(~Reset & (~R&LbarInternal[2]&LbarInternal[1]&LInternal[0] | ~R&LbarInternal[2]&LInternal[1]&LInternal[0] | L&R), CLK, LInternal[1], LbarInternal[1]);
+	DLatchKevin(~Reset & (~R&LbarInternal[2]&LInternal[1]&LInternal[0] | (L~^R)&LbarInternal[2]&LInternal[1]&LbarInternal[0]&RInternal[0]&RbarInternal[1]&RInternal[2]), CLK, LInternal[2], LbarInternal[2]);
+endmodule

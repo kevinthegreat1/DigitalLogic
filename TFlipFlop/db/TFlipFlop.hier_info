@@ -1,44 +1,31 @@
-|BinaryCounterTest
-SW[0] => SW[0].IN1
-KEY[0] => KEY[0].IN1
-LEDR[0] << BinaryCounter:comb_3.port2
-LEDR[1] << BinaryCounter:comb_3.port2
-LEDR[2] << BinaryCounter:comb_3.port2
-LEDR[3] << BinaryCounter:comb_3.port2
-LEDR[4] << BinaryCounter:comb_3.port2
-LEDR[5] << BinaryCounter:comb_3.port2
-LEDR[6] << BinaryCounter:comb_3.port2
-LEDR[7] << BinaryCounter:comb_3.port2
-
-
-|BinaryCounterTest|BinaryCounter:comb_3
+|BinaryCounter
 T => T.IN8
 CLK => CLK.IN1
-counter[0] <= TFlipFlop:comb_3.port2
-counter[1] <= TFlipFlop:comb_4.port2
-counter[2] <= TFlipFlop:comb_6.port2
-counter[3] <= TFlipFlop:comb_8.port2
-counter[4] <= TFlipFlop:comb_10.port2
-counter[5] <= TFlipFlop:comb_12.port2
-counter[6] <= TFlipFlop:comb_14.port2
-counter[7] <= TFlipFlop:comb_16.port2
+counter[0] << TFlipFlop:comb_3.port2
+counter[1] << TFlipFlop:comb_4.port2
+counter[2] << TFlipFlop:comb_5.port2
+counter[3] << TFlipFlop:comb_6.port2
+counter[4] << TFlipFlop:comb_7.port2
+counter[5] << TFlipFlop:comb_8.port2
+counter[6] << TFlipFlop:comb_9.port2
+counter[7] << TFlipFlop:comb_10.port2
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_3
+|BinaryCounter|TFlipFlop:comb_3
 T => comb.IN1
 CLK => CLK.IN1
 Q <= DFlipFlop:comb_3.port2
 Qbar <= DFlipFlop:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3
+|BinaryCounter|TFlipFlop:comb_3|DFlipFlop:comb_3
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4
+|BinaryCounter|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -47,14 +34,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_6
+|BinaryCounter|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -63,28 +50,28 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_3|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_4
+|BinaryCounter|TFlipFlop:comb_4
 T => comb.IN1
 CLK => CLK.IN1
 Q <= DFlipFlop:comb_3.port2
 Qbar <= DFlipFlop:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_4|DFlipFlop:comb_3
+|BinaryCounter|TFlipFlop:comb_4|DFlipFlop:comb_3
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_4
+|BinaryCounter|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -93,14 +80,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_6
+|BinaryCounter|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -109,28 +96,28 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_4|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_6
+|BinaryCounter|TFlipFlop:comb_5
 T => comb.IN1
 CLK => CLK.IN1
 Q <= DFlipFlop:comb_3.port2
 Qbar <= DFlipFlop:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_6|DFlipFlop:comb_3
+|BinaryCounter|TFlipFlop:comb_5|DFlipFlop:comb_3
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_4
+|BinaryCounter|TFlipFlop:comb_5|DFlipFlop:comb_3|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -139,14 +126,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_5|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_6
+|BinaryCounter|TFlipFlop:comb_5|DFlipFlop:comb_3|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -155,28 +142,28 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_5|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_8
+|BinaryCounter|TFlipFlop:comb_6
 T => comb.IN1
 CLK => CLK.IN1
 Q <= DFlipFlop:comb_3.port2
 Qbar <= DFlipFlop:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_8|DFlipFlop:comb_3
+|BinaryCounter|TFlipFlop:comb_6|DFlipFlop:comb_3
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_4
+|BinaryCounter|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -185,14 +172,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_6
+|BinaryCounter|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -201,28 +188,28 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_6|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_10
+|BinaryCounter|TFlipFlop:comb_7
 T => comb.IN1
 CLK => CLK.IN1
 Q <= DFlipFlop:comb_3.port2
 Qbar <= DFlipFlop:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_10|DFlipFlop:comb_3
+|BinaryCounter|TFlipFlop:comb_7|DFlipFlop:comb_3
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_4
+|BinaryCounter|TFlipFlop:comb_7|DFlipFlop:comb_3|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -231,14 +218,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_7|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_6
+|BinaryCounter|TFlipFlop:comb_7|DFlipFlop:comb_3|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -247,28 +234,28 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_7|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_12
+|BinaryCounter|TFlipFlop:comb_8
 T => comb.IN1
 CLK => CLK.IN1
 Q <= DFlipFlop:comb_3.port2
 Qbar <= DFlipFlop:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_12|DFlipFlop:comb_3
+|BinaryCounter|TFlipFlop:comb_8|DFlipFlop:comb_3
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_12|DFlipFlop:comb_3|DLatchKevin:comb_4
+|BinaryCounter|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -277,14 +264,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_12|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_12|DFlipFlop:comb_3|DLatchKevin:comb_6
+|BinaryCounter|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -293,28 +280,28 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_12|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_8|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_14
+|BinaryCounter|TFlipFlop:comb_9
 T => comb.IN1
 CLK => CLK.IN1
 Q <= DFlipFlop:comb_3.port2
 Qbar <= DFlipFlop:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_14|DFlipFlop:comb_3
+|BinaryCounter|TFlipFlop:comb_9|DFlipFlop:comb_3
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_14|DFlipFlop:comb_3|DLatchKevin:comb_4
+|BinaryCounter|TFlipFlop:comb_9|DFlipFlop:comb_3|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -323,14 +310,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_14|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_9|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_14|DFlipFlop:comb_3|DLatchKevin:comb_6
+|BinaryCounter|TFlipFlop:comb_9|DFlipFlop:comb_3|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -339,28 +326,28 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_14|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_9|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_16
+|BinaryCounter|TFlipFlop:comb_10
 T => comb.IN1
 CLK => CLK.IN1
 Q <= DFlipFlop:comb_3.port2
 Qbar <= DFlipFlop:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_16|DFlipFlop:comb_3
+|BinaryCounter|TFlipFlop:comb_10|DFlipFlop:comb_3
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_16|DFlipFlop:comb_3|DLatchKevin:comb_4
+|BinaryCounter|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -369,14 +356,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_16|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_16|DFlipFlop:comb_3|DLatchKevin:comb_6
+|BinaryCounter|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -385,7 +372,7 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|BinaryCounterTest|BinaryCounter:comb_3|TFlipFlop:comb_16|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
+|BinaryCounter|TFlipFlop:comb_10|DFlipFlop:comb_3|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE

@@ -1,0 +1,96 @@
+|Elevator
+up => Snext.IN0
+up => Snext.IN0
+up => Snext.IN0
+up => Snext.IN0
+down => Snext.IN1
+down => Snext.IN1
+down => Snext.IN1
+down => Snext.IN1
+CLK => CLK.IN2
+R => comb.IN1
+R => comb.IN1
+lights[0] <= lights.DB_MAX_OUTPUT_PORT_TYPE
+lights[1] <= lights.DB_MAX_OUTPUT_PORT_TYPE
+lights[2] <= lights.DB_MAX_OUTPUT_PORT_TYPE
+lights[3] <= lights.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevator|DFlipFlop:comb_28
+D => D.IN1
+CLK => CLKL1.IN1
+Q <= DLatchKevin:comb_6.port2
+Qbar <= DLatchKevin:comb_6.port3
+
+
+|Elevator|DFlipFlop:comb_28|DLatchKevin:comb_4
+D => comb.IN0
+D => comb.IN0
+E => comb.IN1
+E => comb.IN1
+Q <= SRNorLatch:comb_3.port2
+Qbar <= SRNorLatch:comb_3.port3
+
+
+|Elevator|DFlipFlop:comb_28|DLatchKevin:comb_4|SRNorLatch:comb_3
+S => QbarInternal.IN0
+R => QInternal.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevator|DFlipFlop:comb_28|DLatchKevin:comb_6
+D => comb.IN0
+D => comb.IN0
+E => comb.IN1
+E => comb.IN1
+Q <= SRNorLatch:comb_3.port2
+Qbar <= SRNorLatch:comb_3.port3
+
+
+|Elevator|DFlipFlop:comb_28|DLatchKevin:comb_6|SRNorLatch:comb_3
+S => QbarInternal.IN0
+R => QInternal.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevator|DFlipFlop:comb_31
+D => D.IN1
+CLK => CLKL1.IN1
+Q <= DLatchKevin:comb_6.port2
+Qbar <= DLatchKevin:comb_6.port3
+
+
+|Elevator|DFlipFlop:comb_31|DLatchKevin:comb_4
+D => comb.IN0
+D => comb.IN0
+E => comb.IN1
+E => comb.IN1
+Q <= SRNorLatch:comb_3.port2
+Qbar <= SRNorLatch:comb_3.port3
+
+
+|Elevator|DFlipFlop:comb_31|DLatchKevin:comb_4|SRNorLatch:comb_3
+S => QbarInternal.IN0
+R => QInternal.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevator|DFlipFlop:comb_31|DLatchKevin:comb_6
+D => comb.IN0
+D => comb.IN0
+E => comb.IN1
+E => comb.IN1
+Q <= SRNorLatch:comb_3.port2
+Qbar <= SRNorLatch:comb_3.port3
+
+
+|Elevator|DFlipFlop:comb_31|DLatchKevin:comb_6|SRNorLatch:comb_3
+S => QbarInternal.IN0
+R => QInternal.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
+
+

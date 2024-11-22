@@ -1,11 +1,11 @@
-|DFlipFlop
+|DLatchWaveform
 D => D.IN1
-CLK => CLKL1.IN1
-Q <= DLatchKevin:comb_6.port2
-Qbar <= DLatchKevin:comb_6.port3
+E => E.IN1
+Q <= DLatchKevin:comb_3.port2
+Qbar <= DLatchKevin:comb_3.port3
 
 
-|DFlipFlop|DLatchKevin:comb_4
+|DLatchWaveform|DLatchKevin:comb_3
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -14,23 +14,7 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|DFlipFlop|DLatchKevin:comb_4|SRNorLatch:comb_3
-S => QbarInternal.IN0
-R => QInternal.IN1
-Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
-Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|DFlipFlop|DLatchKevin:comb_6
-D => comb.IN0
-D => comb.IN0
-E => comb.IN1
-E => comb.IN1
-Q <= SRNorLatch:comb_3.port2
-Qbar <= SRNorLatch:comb_3.port3
-
-
-|DFlipFlop|DLatchKevin:comb_6|SRNorLatch:comb_3
+|DLatchWaveform|DLatchKevin:comb_3|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE

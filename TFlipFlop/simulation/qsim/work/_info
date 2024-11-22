@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\User\Documents\KevinYang\TFlipFlop\simulation\qsim
+vBinaryCounter
+Z1 IKmdU7zQCc:65F^A8g2>Lg3
+Z2 Vaz4kIWLaY]EI`o2GNbAGN1
+Z3 dC:\Users\User\Documents\KevinYang\TFlipFlop\simulation\qsim
+Z4 w1732233192
+Z5 8TFlipFlop.vo
+Z6 FTFlipFlop.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|TFlipFlop.vo|
+Z9 o-work work -O0
+Z10 n@binary@counter
+!i10b 1
+Z11 !s100 8JjK?8>OcWJ=NKm>WhT5h3
+!s85 0
+Z12 !s108 1732233193.893000
+Z13 !s107 TFlipFlop.vo|
+!s101 -O0
+vBinaryCounter_vlg_check_tst
+!i10b 1
+!s100 NnhaTPmj]CJRiW>U?XdWQ1
+I`YE<265l]o?>eaZKOYcP]2
+VFTL84aL`@0JF51SB5YaPJ0
+R3
+Z14 w1732233191
+Z15 8BinaryCounter.vwf.vt
+Z16 FBinaryCounter.vwf.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z17 !s108 1732233193.991000
+Z18 !s107 BinaryCounter.vwf.vt|
+Z19 !s90 -work|work|BinaryCounter.vwf.vt|
+!s101 -O0
+R9
+n@binary@counter_vlg_check_tst
+vBinaryCounter_vlg_sample_tst
+!i10b 1
+!s100 UoDWR8QCOVN2G:ngVNUoc0
+IJ9jYJgOSEjAgh3SdhV^gX0
+Vg`hoX;Tlg]f5lT7QTHWX10
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+n@binary@counter_vlg_sample_tst
+vBinaryCounter_vlg_vec_tst
+!i10b 1
+!s100 9j^Z[kCokj;`J_L:TXCPE2
+IFIG<DJa@JW`noWUm;IiIM0
+V;@o<e_2aY:EYj^S^mSn0<0
+R3
+R14
+R15
+R16
+L0 279
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+n@binary@counter_vlg_vec_tst
+vTFlipFlop
+Z20 !s100 >7QOS[7iKd;TfIW47F4@52
+Z21 I?d5[NCOZQl4`2ObE6L3K]0
+Z22 Vdo882XocnKRX4mke`SQj02
+R3
+Z23 w1732233001
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+Z24 n@t@flip@flop
+Z25 !s108 1732233002.893000
+R13
+!i10b 1
+!s85 0
+!s101 -O0
+vTFlipFlop_vlg_check_tst
+Z26 !s100 WF[B=V<nQnLd50cZL1H152
+Z27 IAi8ch[][m874MB5a39G:E1
+Z28 V:6JY`@0z2Ga;X14zKV?m90
+R3
+Z29 w1732232999
+Z30 8TFlipFlop.vwf.vt
+Z31 FTFlipFlop.vwf.vt
+L0 59
+R7
+r1
+31
+Z32 !s108 1732233002.994000
+Z33 !s107 TFlipFlop.vwf.vt|
+Z34 !s90 -work|work|TFlipFlop.vwf.vt|
+R9
+Z35 n@t@flip@flop_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vTFlipFlop_vlg_sample_tst
+Z36 !s100 FhS>9ioFn23U:X9VaTKD`2
+Z37 IeQPo@;o4FY7Y]^Yh1HBD]1
+Z38 V3SL36nD;gVR@HKYiGAKQQ3
+R3
+R29
+R30
+R31
+L0 29
+R7
+r1
+31
+R32
+R33
+R34
+R9
+Z39 n@t@flip@flop_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vTFlipFlop_vlg_vec_tst
+Z40 IJRI73>fjT=V^TILXXE]M_1
+Z41 VnY1mHNEZdPENNSg6Hoboj3
+R3
+R29
+R30
+R31
+Z42 L0 181
+R7
+r1
+31
+R32
+R33
+R34
+R9
+Z43 n@t@flip@flop_vlg_vec_tst
+Z44 !s100 ?M?HZB0ST6CA[OFF;DhFe1
+!i10b 1
+!s85 0
+!s101 -O0

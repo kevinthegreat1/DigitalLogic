@@ -1,0 +1,9 @@
+module Shifter(input up, input down, input CLK, output [3:0]lights);
+	wire [1:0]S, Sbar, Snext;
+
+	Snext[0] = S[1]&~S[0] | ~up&down&(S[1]|~S[0]);
+	Snext[1] = S[1]&S[0] | up&~down&(S[0]|S[1]);
+
+	DFlipFlop(Snext[0], CLK, S[0], Sbar[0]);
+	DFlipFlop(Snext[1], CLK, S[1], Sbar[0]);
+endmodule

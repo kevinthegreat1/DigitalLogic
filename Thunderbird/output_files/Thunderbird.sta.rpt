@@ -1,0 +1,1345 @@
+TimeQuest Timing Analyzer report for Thunderbird
+Wed Nov 20 13:00:07 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'KEY[2]'
+ 13. Slow 1200mV 85C Model Hold: 'KEY[2]'
+ 14. Slow 1200mV 85C Model Recovery: 'KEY[2]'
+ 15. Slow 1200mV 85C Model Removal: 'KEY[2]'
+ 16. Slow 1200mV 85C Model Minimum Pulse Width: 'KEY[2]'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Slow 1200mV 85C Model Metastability Report
+ 22. Slow 1200mV 0C Model Fmax Summary
+ 23. Slow 1200mV 0C Model Setup Summary
+ 24. Slow 1200mV 0C Model Hold Summary
+ 25. Slow 1200mV 0C Model Recovery Summary
+ 26. Slow 1200mV 0C Model Removal Summary
+ 27. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 28. Slow 1200mV 0C Model Setup: 'KEY[2]'
+ 29. Slow 1200mV 0C Model Hold: 'KEY[2]'
+ 30. Slow 1200mV 0C Model Recovery: 'KEY[2]'
+ 31. Slow 1200mV 0C Model Removal: 'KEY[2]'
+ 32. Slow 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'
+ 33. Setup Times
+ 34. Hold Times
+ 35. Clock to Output Times
+ 36. Minimum Clock to Output Times
+ 37. Slow 1200mV 0C Model Metastability Report
+ 38. Fast 1200mV 0C Model Setup Summary
+ 39. Fast 1200mV 0C Model Hold Summary
+ 40. Fast 1200mV 0C Model Recovery Summary
+ 41. Fast 1200mV 0C Model Removal Summary
+ 42. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 43. Fast 1200mV 0C Model Setup: 'KEY[2]'
+ 44. Fast 1200mV 0C Model Hold: 'KEY[2]'
+ 45. Fast 1200mV 0C Model Recovery: 'KEY[2]'
+ 46. Fast 1200mV 0C Model Removal: 'KEY[2]'
+ 47. Fast 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'
+ 48. Setup Times
+ 49. Hold Times
+ 50. Clock to Output Times
+ 51. Minimum Clock to Output Times
+ 52. Fast 1200mV 0C Model Metastability Report
+ 53. Multicorner Timing Analysis Summary
+ 54. Setup Times
+ 55. Hold Times
+ 56. Clock to Output Times
+ 57. Minimum Clock to Output Times
+ 58. Board Trace Model Assignments
+ 59. Input Transition Times
+ 60. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 61. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 62. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 63. Setup Transfers
+ 64. Hold Transfers
+ 65. Recovery Transfers
+ 66. Removal Transfers
+ 67. Report TCCS
+ 68. Report RSKM
+ 69. Unconstrained Paths
+ 70. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name      ; Thunderbird                                        ;
+; Device Family      ; Cyclone IV E                                       ;
+; Device Name        ; EP4CE115F29C7                                      ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Enabled                                            ;
++--------------------+----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; KEY[2]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { KEY[2] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 160.98 MHz ; 160.98 MHz      ; KEY[2]     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++--------+--------+-------------------+
+; Clock  ; Slack  ; End Point TNS     ;
++--------+--------+-------------------+
+; KEY[2] ; -2.891 ; -13.312           ;
++--------+--------+-------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++--------+-------+-------------------+
+; Clock  ; Slack ; End Point TNS     ;
++--------+-------+-------------------+
+; KEY[2] ; 0.570 ; 0.000             ;
++--------+-------+-------------------+
+
+
++----------------------------------------+
+; Slow 1200mV 85C Model Recovery Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; KEY[2] ; -3.512 ; -6.785               ;
++--------+--------+----------------------+
+
+
++---------------------------------------+
+; Slow 1200mV 85C Model Removal Summary ;
++--------+-------+----------------------+
+; Clock  ; Slack ; End Point TNS        ;
++--------+-------+----------------------+
+; KEY[2] ; 0.963 ; 0.000                ;
++--------+-------+----------------------+
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++--------+--------+---------------------------------+
+; Clock  ; Slack  ; End Point TNS                   ;
++--------+--------+---------------------------------+
+; KEY[2] ; -3.000 ; -3.000                          ;
++--------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'KEY[2]'                                                                                                                                                                                                                        ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                             ; To Node                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.891 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.074     ; 2.632      ;
+; -2.760 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.038      ; 2.613      ;
+; -2.747 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.112     ; 2.450      ;
+; -2.725 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.052     ; 2.488      ;
+; -2.714 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.049      ; 2.578      ;
+; -2.606 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 1.720      ; 3.641      ;
+; -2.593 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.232      ; 2.640      ;
+; -2.579 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 1.640      ; 3.441      ;
+; -2.470 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.340     ; 2.223      ;
+; -2.327 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.192     ; 1.857      ;
+; -2.324 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.378     ; 2.039      ;
+; -2.314 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.228     ; 2.179      ;
+; -2.265 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.318     ; 2.040      ;
+; -2.261 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.217     ; 2.137      ;
+; -2.179 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 1.720      ; 3.714      ;
+; -2.172 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.034     ; 2.231      ;
+; -2.167 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 1.454      ; 3.214      ;
+; -2.134 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 1.640      ; 3.496      ;
+; -2.057 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.042     ; 1.737      ;
+; -2.036 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.135     ; 1.287      ;
+; -1.972 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.154     ; 1.540      ;
+; -1.766 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.015      ; 1.167      ;
+; -1.749 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 1.454      ; 3.296      ;
+; -1.195 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.039      ; 0.537      ;
+; -1.187 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.123     ; 0.541      ;
+; -0.954 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.092      ; 0.560      ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'KEY[2]'                                                                                                                                                                                                                        ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                             ; To Node                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.570 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 1.772      ; 2.342      ;
+; 0.808 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.205      ; 0.513      ;
+; 0.859 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.135      ; 0.494      ;
+; 0.990 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 1.772      ; 2.262      ;
+; 1.014 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 1.682      ; 2.696      ;
+; 1.022 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.033     ; 0.489      ;
+; 1.321 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 1.488      ; 2.809      ;
+; 1.387 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 1.682      ; 2.569      ;
+; 1.485 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.105      ; 1.090      ;
+; 1.491 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.318      ; 1.809      ;
+; 1.500 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.044     ; 1.456      ;
+; 1.603 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.042      ; 1.645      ;
+; 1.615 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.232     ; 1.383      ;
+; 1.692 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.142      ; 1.834      ;
+; 1.699 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 1.488      ; 2.687      ;
+; 1.723 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.052      ; 1.775      ;
+; 1.745 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 1.779      ;
+; 1.759 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.039     ; 1.220      ;
+; 1.877 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.102     ; 1.775      ;
+; 1.946 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.142     ; 1.804      ;
+; 2.218 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.296     ; 1.922      ;
+; 2.231 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.152     ; 2.079      ;
+; 2.330 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.238     ; 2.092      ;
+; 2.355 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.132      ; 2.487      ;
+; 2.364 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.012     ; 2.352      ;
+; 2.476 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.046      ; 2.522      ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Recovery: 'KEY[2]'                                                                                                                                                                                                                     ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                             ; To Node                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.512 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.090     ; 2.613      ;
+; -3.379 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.022      ; 2.592      ;
+; -3.366 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.128     ; 2.429      ;
+; -3.344 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.068     ; 2.467      ;
+; -3.333 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.033      ; 2.557      ;
+; -3.273 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.205     ; 2.352      ;
+; -3.214 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.216      ; 2.621      ;
+; -3.131 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.093     ; 2.322      ;
+; -3.127 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.243     ; 2.168      ;
+; -3.096 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.183     ; 2.197      ;
+; -3.085 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.082     ; 2.287      ;
+; -2.975 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.101      ; 2.360      ;
+; -2.834 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; 1.589      ; 3.707      ;
+; -2.798 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; 1.704      ; 3.693      ;
+; -2.279 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 1.000        ; 1.589      ; 3.652      ;
+; -2.225 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 1.704      ; 3.620      ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Removal: 'KEY[2]'                                                                                                                                                                                                                     ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                             ; To Node                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.963 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 1.753      ; 2.716      ;
+; 0.967 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.000        ; 1.634      ; 2.601      ;
+; 1.546 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 1.753      ; 2.799      ;
+; 1.593 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; 1.634      ; 2.727      ;
+; 1.985 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.006     ; 1.479      ;
+; 1.990 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.299      ; 1.789      ;
+; 2.191 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.123      ; 1.814      ;
+; 2.222 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.033      ; 1.755      ;
+; 2.246 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.150     ; 1.596      ;
+; 2.248 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.092     ; 1.656      ;
+; 2.482 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.031     ; 1.951      ;
+; 2.495 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.113      ; 2.108      ;
+; 2.564 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.180      ; 2.244      ;
+; 2.594 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.027      ; 2.121      ;
+; 2.646 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.086     ; 2.060      ;
+; 2.670 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.004      ; 2.174      ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'KEY[2]'                                                                                                                     ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                                                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]                                                                                ;
+; 0.377  ; 0.377        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_87|comb_6|comb_3|QInternal~0|dataa                                        ;
+; 0.377  ; 0.377        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_96|comb_6|comb_3|QInternal~0|dataa                                        ;
+; 0.378  ; 0.378        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_84|comb_4|comb_3|QInternal~1|dataa                                        ;
+; 0.380  ; 0.380        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.385  ; 0.385        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_84|comb_6|comb_3|QInternal~0|datac                                        ;
+; 0.386  ; 0.386        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ;
+; 0.389  ; 0.389        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.394  ; 0.394        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|o                                                                        ;
+; 0.404  ; 0.404        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.411  ; 0.411        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_90|comb_6|comb_3|QInternal~0|datad                                        ;
+; 0.427  ; 0.427        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ;
+; 0.430  ; 0.430        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_93|comb_4|comb_3|QInternal~2|datac                                        ;
+; 0.430  ; 0.430        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_93|comb_6|comb_3|QInternal~0|datac                                        ;
+; 0.434  ; 0.434        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.436  ; 0.436        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ;
+; 0.437  ; 0.437        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_99|comb_6|comb_3|QInternal~0|datad                                        ;
+; 0.438  ; 0.438        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_96|comb_4|comb_3|QInternal~2|datad                                        ;
+; 0.440  ; 0.440        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.466  ; 0.466        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|i                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|i                                                                        ;
+; 0.530  ; 0.530        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.558  ; 0.558        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.560  ; 0.560        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_96|comb_4|comb_3|QInternal~2|datad                                        ;
+; 0.560  ; 0.560        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_99|comb_6|comb_3|QInternal~0|datad                                        ;
+; 0.563  ; 0.563        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ;
+; 0.565  ; 0.565        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.569  ; 0.569        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_93|comb_4|comb_3|QInternal~2|datac                                        ;
+; 0.569  ; 0.569        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_93|comb_6|comb_3|QInternal~0|datac                                        ;
+; 0.571  ; 0.571        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ;
+; 0.588  ; 0.588        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_90|comb_6|comb_3|QInternal~0|datad                                        ;
+; 0.591  ; 0.591        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.606  ; 0.606        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|o                                                                        ;
+; 0.610  ; 0.610        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.614  ; 0.614        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ;
+; 0.614  ; 0.614        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_84|comb_6|comb_3|QInternal~0|datac                                        ;
+; 0.617  ; 0.617        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.622  ; 0.622        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_84|comb_4|comb_3|QInternal~1|dataa                                        ;
+; 0.623  ; 0.623        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_87|comb_6|comb_3|QInternal~0|dataa                                        ;
+; 0.623  ; 0.623        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_96|comb_6|comb_3|QInternal~0|dataa                                        ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; KEY[2]     ; 4.849 ; 5.165 ; Rise       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; 4.003 ; 4.366 ; Rise       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; 4.547 ; 4.868 ; Rise       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; 4.849 ; 5.165 ; Rise       ; KEY[2]          ;
+; KEY[*]    ; KEY[2]     ; 6.529 ; 6.953 ; Fall       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; 6.010 ; 6.295 ; Fall       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; 6.529 ; 6.953 ; Fall       ; KEY[2]          ;
+;  KEY[2]   ; KEY[2]     ; 3.106 ; 3.179 ; Fall       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; 6.125 ; 6.416 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[2]     ; -2.679 ; -3.029 ; Rise       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; -2.679 ; -3.029 ; Rise       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; -2.913 ; -3.267 ; Rise       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; -3.481 ; -3.767 ; Rise       ; KEY[2]          ;
+; KEY[*]    ; KEY[2]     ; -0.490 ; -0.570 ; Fall       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; -3.428 ; -3.725 ; Fall       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; -3.718 ; -4.061 ; Fall       ; KEY[2]          ;
+;  KEY[2]   ; KEY[2]     ; -0.490 ; -0.570 ; Fall       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; -3.537 ; -3.852 ; Fall       ; KEY[2]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 8.513 ; 8.556 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 7.306 ; 7.249 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 8.407 ; 8.473 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 8.513 ; 8.556 ; Fall       ; KEY[2]          ;
+;  LEDR[3]  ; KEY[2]     ; 7.134 ; 7.196 ; Fall       ; KEY[2]          ;
+;  LEDR[4]  ; KEY[2]     ; 6.807 ; 6.839 ; Fall       ; KEY[2]          ;
+;  LEDR[5]  ; KEY[2]     ; 7.864 ; 8.026 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 6.578 ; 6.611 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 7.065 ; 7.012 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 8.098 ; 8.164 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 8.222 ; 8.265 ; Fall       ; KEY[2]          ;
+;  LEDR[3]  ; KEY[2]     ; 6.899 ; 6.960 ; Fall       ; KEY[2]          ;
+;  LEDR[4]  ; KEY[2]     ; 6.578 ; 6.611 ; Fall       ; KEY[2]          ;
+;  LEDR[5]  ; KEY[2]     ; 7.600 ; 7.757 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 169.84 MHz ; 169.84 MHz      ; KEY[2]     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++--------+--------+------------------+
+; Clock  ; Slack  ; End Point TNS    ;
++--------+--------+------------------+
+; KEY[2] ; -2.531 ; -11.990          ;
++--------+--------+------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++--------+-------+------------------+
+; Clock  ; Slack ; End Point TNS    ;
++--------+-------+------------------+
+; KEY[2] ; 0.537 ; 0.000            ;
++--------+-------+------------------+
+
+
++---------------------------------------+
+; Slow 1200mV 0C Model Recovery Summary ;
++--------+--------+---------------------+
+; Clock  ; Slack  ; End Point TNS       ;
++--------+--------+---------------------+
+; KEY[2] ; -3.121 ; -6.046              ;
++--------+--------+---------------------+
+
+
++--------------------------------------+
+; Slow 1200mV 0C Model Removal Summary ;
++--------+-------+---------------------+
+; Clock  ; Slack ; End Point TNS       ;
++--------+-------+---------------------+
+; KEY[2] ; 0.866 ; 0.000               ;
++--------+-------+---------------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++--------+--------+--------------------------------+
+; Clock  ; Slack  ; End Point TNS                  ;
++--------+--------+--------------------------------+
+; KEY[2] ; -3.000 ; -3.000                         ;
++--------+--------+--------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'KEY[2]'                                                                                                                                                                                                                         ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                             ; To Node                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.531 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.067     ; 2.391      ;
+; -2.444 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 1.496      ; 3.258      ;
+; -2.419 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.100     ; 2.246      ;
+; -2.412 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.036      ; 2.375      ;
+; -2.386 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 1.571      ; 3.384      ;
+; -2.386 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.037      ; 2.350      ;
+; -2.379 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.046     ; 2.260      ;
+; -2.260 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.208      ; 2.395      ;
+; -2.165 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.306     ; 2.039      ;
+; -2.057 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.339     ; 1.898      ;
+; -2.054 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.175     ; 1.697      ;
+; -2.050 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.203     ; 2.027      ;
+; -2.024 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 1.332      ; 3.036      ;
+; -1.996 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.202     ; 1.974      ;
+; -1.973 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.285     ; 1.868      ;
+; -1.932 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 1.496      ; 3.246      ;
+; -1.912 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 1.571      ; 3.410      ;
+; -1.898 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.031     ; 2.047      ;
+; -1.805 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.039     ; 1.584      ;
+; -1.746 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.062     ; 1.163      ;
+; -1.741 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.142     ; 1.417      ;
+; -1.550 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 1.332      ; 3.062      ;
+; -1.497 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.074      ; 1.050      ;
+; -1.109 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.026     ; 0.506      ;
+; -1.094 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.157     ; 0.510      ;
+; -0.901 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.026      ; 0.526      ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'KEY[2]'                                                                                                                                                                                                                         ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                             ; To Node                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.537 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 1.617      ; 2.154      ;
+; 0.828 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.128      ; 0.456      ;
+; 0.875 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.062      ; 0.437      ;
+; 0.965 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 1.535      ; 2.500      ;
+; 0.991 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 1.617      ; 2.108      ;
+; 1.011 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.076     ; 0.435      ;
+; 1.218 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 1.363      ; 2.581      ;
+; 1.334 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 1.535      ; 2.369      ;
+; 1.345 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.158      ; 1.003      ;
+; 1.358 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.041     ; 1.317      ;
+; 1.364 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.285      ; 1.649      ;
+; 1.449 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.208     ; 1.241      ;
+; 1.455 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.039      ; 1.494      ;
+; 1.538 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.120      ; 1.658      ;
+; 1.577 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.046      ; 1.623      ;
+; 1.586 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.031      ; 1.617      ;
+; 1.591 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.026      ; 1.117      ;
+; 1.632 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 1.363      ; 2.495      ;
+; 1.702 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.093     ; 1.609      ;
+; 1.760 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.134     ; 1.626      ;
+; 1.986 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.265     ; 1.721      ;
+; 1.998 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.133     ; 1.865      ;
+; 2.099 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.213     ; 1.886      ;
+; 2.144 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.011     ; 2.133      ;
+; 2.156 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.121      ; 2.277      ;
+; 2.252 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.041      ; 2.293      ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Recovery: 'KEY[2]'                                                                                                                                                                                                                      ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                             ; To Node                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.121 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.028     ; 2.373      ;
+; -3.008 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.061     ; 2.227      ;
+; -3.001 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.075      ; 2.356      ;
+; -2.976 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.076      ; 2.332      ;
+; -2.969 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.007     ; 2.242      ;
+; -2.925 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.128     ; 2.159      ;
+; -2.850 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.247      ; 2.377      ;
+; -2.817 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.161     ; 2.018      ;
+; -2.810 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.025     ; 2.147      ;
+; -2.756 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.024     ; 2.094      ;
+; -2.733 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.107     ; 1.988      ;
+; -2.658 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.147      ; 2.167      ;
+; -2.546 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; 1.510      ; 3.418      ;
+; -2.501 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; 1.610      ; 3.391      ;
+; -2.058 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 1.000        ; 1.510      ; 3.430      ;
+; -1.975 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 1.610      ; 3.365      ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Removal: 'KEY[2]'                                                                                                                                                                                                                      ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                             ; To Node                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.866 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 1.654      ; 2.520      ;
+; 0.883 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.000        ; 1.550      ; 2.433      ;
+; 1.379 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 1.654      ; 2.533      ;
+; 1.424 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; 1.550      ; 2.474      ;
+; 1.782 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.054      ; 1.336      ;
+; 1.809 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.322      ; 1.631      ;
+; 1.983 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.157      ; 1.640      ;
+; 2.022 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.083      ; 1.605      ;
+; 2.023 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.078     ; 1.445      ;
+; 2.049 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.026     ; 1.523      ;
+; 2.220 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.026      ; 1.746      ;
+; 2.232 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.158      ; 1.890      ;
+; 2.307 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.218      ; 2.025      ;
+; 2.333 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.078      ; 1.911      ;
+; 2.415 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.021     ; 1.894      ;
+; 2.429 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.053      ; 1.982      ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'                                                                                                                      ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                                                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]                                                                                ;
+; 0.416  ; 0.416        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|o                                                                        ;
+; 0.437  ; 0.437        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_87|comb_6|comb_3|QInternal~0|dataa                                        ;
+; 0.437  ; 0.437        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_96|comb_6|comb_3|QInternal~0|dataa                                        ;
+; 0.438  ; 0.438        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_84|comb_4|comb_3|QInternal~1|dataa                                        ;
+; 0.438  ; 0.438        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_84|comb_6|comb_3|QInternal~0|datac                                        ;
+; 0.448  ; 0.448        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.449  ; 0.449        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.450  ; 0.450        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ;
+; 0.463  ; 0.463        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_90|comb_6|comb_3|QInternal~0|datad                                        ;
+; 0.464  ; 0.464        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.473  ; 0.473        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.492  ; 0.492        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ;
+; 0.492  ; 0.492        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_93|comb_4|comb_3|QInternal~2|datac                                        ;
+; 0.493  ; 0.493        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_93|comb_6|comb_3|QInternal~0|datac                                        ;
+; 0.494  ; 0.494        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.497  ; 0.497        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.497  ; 0.497        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ;
+; 0.498  ; 0.498        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_96|comb_4|comb_3|QInternal~2|datad                                        ;
+; 0.498  ; 0.498        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_99|comb_6|comb_3|QInternal~0|datad                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|i                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|i                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_99|comb_6|comb_3|QInternal~0|datad                                        ;
+; 0.501  ; 0.501        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_96|comb_4|comb_3|QInternal~2|datad                                        ;
+; 0.502  ; 0.502        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.503  ; 0.503        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.505  ; 0.505        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_93|comb_4|comb_3|QInternal~2|datac                                        ;
+; 0.505  ; 0.505        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_93|comb_6|comb_3|QInternal~0|datac                                        ;
+; 0.507  ; 0.507        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ;
+; 0.524  ; 0.524        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.534  ; 0.534        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.536  ; 0.536        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_90|comb_6|comb_3|QInternal~0|datad                                        ;
+; 0.549  ; 0.549        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.550  ; 0.550        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ;
+; 0.550  ; 0.550        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.561  ; 0.561        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_84|comb_6|comb_3|QInternal~0|datac                                        ;
+; 0.562  ; 0.562        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_84|comb_4|comb_3|QInternal~1|dataa                                        ;
+; 0.562  ; 0.562        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_96|comb_6|comb_3|QInternal~0|dataa                                        ;
+; 0.563  ; 0.563        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_87|comb_6|comb_3|QInternal~0|dataa                                        ;
+; 0.584  ; 0.584        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|o                                                                        ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; KEY[2]     ; 4.282 ; 4.481 ; Rise       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; 3.516 ; 3.755 ; Rise       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; 4.017 ; 4.206 ; Rise       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; 4.282 ; 4.481 ; Rise       ; KEY[2]          ;
+; KEY[*]    ; KEY[2]     ; 5.897 ; 6.126 ; Fall       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; 5.387 ; 5.553 ; Fall       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; 5.897 ; 6.126 ; Fall       ; KEY[2]          ;
+;  KEY[2]   ; KEY[2]     ; 2.944 ; 2.932 ; Fall       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; 5.488 ; 5.666 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[2]     ; -2.308 ; -2.537 ; Rise       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; -2.308 ; -2.537 ; Rise       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; -2.530 ; -2.749 ; Rise       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; -3.040 ; -3.210 ; Rise       ; KEY[2]          ;
+; KEY[*]    ; KEY[2]     ; -0.491 ; -0.537 ; Fall       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; -3.044 ; -3.239 ; Fall       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; -3.345 ; -3.507 ; Fall       ; KEY[2]          ;
+;  KEY[2]   ; KEY[2]     ; -0.491 ; -0.537 ; Fall       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; -3.141 ; -3.355 ; Fall       ; KEY[2]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 7.613 ; 7.834 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 6.553 ; 6.590 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 7.539 ; 7.745 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 7.613 ; 7.834 ; Fall       ; KEY[2]          ;
+;  LEDR[3]  ; KEY[2]     ; 6.392 ; 6.561 ; Fall       ; KEY[2]          ;
+;  LEDR[4]  ; KEY[2]     ; 6.098 ; 6.224 ; Fall       ; KEY[2]          ;
+;  LEDR[5]  ; KEY[2]     ; 7.039 ; 7.383 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 5.876 ; 5.998 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 6.321 ; 6.357 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 7.244 ; 7.443 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 7.335 ; 7.548 ; Fall       ; KEY[2]          ;
+;  LEDR[3]  ; KEY[2]     ; 6.164 ; 6.327 ; Fall       ; KEY[2]          ;
+;  LEDR[4]  ; KEY[2]     ; 5.876 ; 5.998 ; Fall       ; KEY[2]          ;
+;  LEDR[5]  ; KEY[2]     ; 6.785 ; 7.116 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++--------+--------+------------------+
+; Clock  ; Slack  ; End Point TNS    ;
++--------+--------+------------------+
+; KEY[2] ; -1.100 ; -3.209           ;
++--------+--------+------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++--------+-------+------------------+
+; Clock  ; Slack ; End Point TNS    ;
++--------+-------+------------------+
+; KEY[2] ; 0.239 ; 0.000            ;
++--------+-------+------------------+
+
+
++---------------------------------------+
+; Fast 1200mV 0C Model Recovery Summary ;
++--------+--------+---------------------+
+; Clock  ; Slack  ; End Point TNS       ;
++--------+--------+---------------------+
+; KEY[2] ; -1.787 ; -3.482              ;
++--------+--------+---------------------+
+
+
++--------------------------------------+
+; Fast 1200mV 0C Model Removal Summary ;
++--------+-------+---------------------+
+; Clock  ; Slack ; End Point TNS       ;
++--------+-------+---------------------+
+; KEY[2] ; 0.419 ; 0.000               ;
++--------+-------+---------------------+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++--------+--------+--------------------------------+
+; Clock  ; Slack  ; End Point TNS                  ;
++--------+--------+--------------------------------+
+; KEY[2] ; -3.000 ; -3.000                         ;
++--------+--------+--------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'KEY[2]'                                                                                                                                                                                                                         ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                             ; To Node                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.100 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.449     ; 0.610      ;
+; -0.990 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.382     ; 0.567      ;
+; -0.853 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.038     ; 1.244      ;
+; -0.795 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.012      ; 1.236      ;
+; -0.788 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.055     ; 1.162      ;
+; -0.765 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.169      ;
+; -0.739 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.031      ; 1.199      ;
+; -0.704 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.116      ; 1.249      ;
+; -0.656 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.171     ; 1.048      ;
+; -0.616 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.121     ; 1.058      ;
+; -0.614 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 1.157      ; 1.700      ;
+; -0.609 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.188     ; 0.984      ;
+; -0.600 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 1.124      ; 1.602      ;
+; -0.586 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.158     ; 0.991      ;
+; -0.580 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.088     ; 0.870      ;
+; -0.560 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.102     ; 1.021      ;
+; -0.517 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 1.157      ; 2.103      ;
+; -0.509 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 1.124      ; 2.011      ;
+; -0.506 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.017     ; 1.052      ;
+; -0.458 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.021     ; 0.815      ;
+; -0.453 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.071     ; 0.760      ;
+; -0.435 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 1.024      ; 1.522      ;
+; -0.338 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 1.000        ; 1.024      ; 1.925      ;
+; 0.053  ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.300      ; 0.256      ;
+; 0.059  ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.400      ; 0.259      ;
+; 0.187  ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.424      ; 0.269      ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'KEY[2]'                                                                                                                                                                                                                         ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                             ; To Node                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.239 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 1.182      ; 1.421      ;
+; 0.250 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.483      ; 0.233      ;
+; 0.278 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.449      ; 0.227      ;
+; 0.364 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 1.182      ; 1.046      ;
+; 0.379 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.346      ; 0.225      ;
+; 0.422 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 1.145      ; 1.567      ;
+; 0.564 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 1.145      ; 1.209      ;
+; 0.605 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 1.041      ; 1.646      ;
+; 0.662 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.013     ; 0.649      ;
+; 0.688 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.158      ; 0.846      ;
+; 0.722 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; -0.500       ; 1.041      ; 1.263      ;
+; 0.732 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.116     ; 0.616      ;
+; 0.747 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.021      ; 0.768      ;
+; 0.773 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.076      ; 0.849      ;
+; 0.798 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.823      ;
+; 0.819 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.017      ; 0.836      ;
+; 0.867 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.043     ; 0.824      ;
+; 0.897 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.065     ; 0.832      ;
+; 1.016 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.083     ; 0.933      ;
+; 1.018 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.147     ; 0.871      ;
+; 1.082 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.058      ; 1.140      ;
+; 1.084 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.006     ; 1.078      ;
+; 1.106 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.117     ; 0.989      ;
+; 1.154 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 1.178      ;
+; 1.329 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.336     ; 0.493      ;
+; 1.461 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.400     ; 0.561      ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Recovery: 'KEY[2]'                                                                                                                                                                                                                      ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                             ; To Node                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.787 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.415     ; 1.235      ;
+; -1.727 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.365     ; 1.225      ;
+; -1.720 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.432     ; 1.151      ;
+; -1.697 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.402     ; 1.158      ;
+; -1.695 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.483     ; 1.115      ;
+; -1.671 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.346     ; 1.188      ;
+; -1.655 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.433     ; 1.125      ;
+; -1.648 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.500     ; 1.051      ;
+; -1.638 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.261     ; 1.240      ;
+; -1.625 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.470     ; 1.058      ;
+; -1.599 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.414     ; 1.088      ;
+; -1.545 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; -0.329     ; 1.119      ;
+; -1.482 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.712      ; 2.097      ;
+; -1.449 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.500        ; 0.780      ; 2.092      ;
+; -0.573 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.712      ; 1.688      ;
+; -0.546 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.780      ; 1.689      ;
++--------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Removal: 'KEY[2]'                                                                                                                                                                                                                      ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                             ; To Node                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.419 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.806      ; 1.225      ;
+; 0.453 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.734      ; 1.187      ;
+; 1.356 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.806      ; 1.662      ;
+; 1.431 ; KEY[2]                                                                                ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; 0.734      ; 1.665      ;
+; 1.555 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.218     ; 0.837      ;
+; 1.571 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.390     ; 0.681      ;
+; 1.639 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.300     ; 0.839      ;
+; 1.665 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.351     ; 0.814      ;
+; 1.683 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.424     ; 0.759      ;
+; 1.697 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.454     ; 0.743      ;
+; 1.767 ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.318     ; 0.949      ;
+; 1.769 ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.382     ; 0.887      ;
+; 1.831 ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.290     ; 1.041      ;
+; 1.843 ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.423     ; 0.920      ;
+; 1.854 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.372     ; 0.982      ;
+; 1.857 ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ; KEY[2]       ; KEY[2]      ; -0.500       ; -0.352     ; 1.005      ;
++-------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'                                                                                                                      ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                                                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]                                                                                ;
+; 0.070  ; 0.070        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.072  ; 0.072        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ;
+; 0.078  ; 0.078        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_84|comb_4|comb_3|QInternal~1|dataa                                        ;
+; 0.078  ; 0.078        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_87|comb_6|comb_3|QInternal~0|dataa                                        ;
+; 0.078  ; 0.078        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_96|comb_6|comb_3|QInternal~0|dataa                                        ;
+; 0.082  ; 0.082        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.082  ; 0.082        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ;
+; 0.085  ; 0.085        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.085  ; 0.085        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.085  ; 0.085        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_84|comb_6|comb_3|QInternal~0|datac                                        ;
+; 0.087  ; 0.087        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_96|comb_4|comb_3|QInternal~2|datad                                        ;
+; 0.087  ; 0.087        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_99|comb_6|comb_3|QInternal~0|datad                                        ;
+; 0.088  ; 0.088        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_93|comb_4|comb_3|QInternal~2|datac                                        ;
+; 0.088  ; 0.088        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_93|comb_6|comb_3|QInternal~0|datac                                        ;
+; 0.091  ; 0.091        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.092  ; 0.092        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ;
+; 0.093  ; 0.093        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; comb_3|comb_90|comb_6|comb_3|QInternal~0|datad                                        ;
+; 0.097  ; 0.097        ; 0.000          ; High Pulse Width ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.120  ; 0.120        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|o                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|i                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|i                                                                        ;
+; 0.880  ; 0.880        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|o                                                                        ;
+; 0.901  ; 0.901        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.906  ; 0.906        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_90|comb_6|comb_3|QInternal~0|datad                                        ;
+; 0.907  ; 0.907        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ;
+; 0.907  ; 0.907        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.911  ; 0.911        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_93|comb_4|comb_3|QInternal~2|datac                                        ;
+; 0.911  ; 0.911        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_93|comb_6|comb_3|QInternal~0|datac                                        ;
+; 0.912  ; 0.912        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_96|comb_4|comb_3|QInternal~2|datad                                        ;
+; 0.912  ; 0.912        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_99|comb_6|comb_3|QInternal~0|datad                                        ;
+; 0.914  ; 0.914        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.914  ; 0.914        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.914  ; 0.914        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_84|comb_6|comb_3|QInternal~0|datac                                        ;
+; 0.917  ; 0.917        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.918  ; 0.918        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~2 ;
+; 0.921  ; 0.921        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_84|comb_4|comb_3|QInternal~1|dataa                                        ;
+; 0.922  ; 0.922        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_87|comb_6|comb_3|QInternal~0|dataa                                        ;
+; 0.922  ; 0.922        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; comb_3|comb_96|comb_6|comb_3|QInternal~0|dataa                                        ;
+; 0.923  ; 0.923        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Fall       ; Thunderbird:comb_3|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|QInternal~0 ;
+; 0.927  ; 0.927        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; Thunderbird:comb_3|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|QInternal~1 ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; KEY[2]     ; 2.497 ; 3.072 ; Rise       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; 2.067 ; 2.666 ; Rise       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; 2.344 ; 2.938 ; Rise       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; 2.497 ; 3.072 ; Rise       ; KEY[2]          ;
+; KEY[*]    ; KEY[2]     ; 2.879 ; 3.571 ; Fall       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; 2.616 ; 3.185 ; Fall       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; 2.879 ; 3.571 ; Fall       ; KEY[2]          ;
+;  KEY[2]   ; KEY[2]     ; 1.114 ; 1.517 ; Fall       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; 2.686 ; 3.261 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[2]     ; -1.416 ; -2.007 ; Rise       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; -1.416 ; -2.007 ; Rise       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; -1.544 ; -2.156 ; Rise       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; -1.819 ; -2.381 ; Rise       ; KEY[2]          ;
+; KEY[*]    ; KEY[2]     ; 0.136  ; -0.239 ; Fall       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; -1.399 ; -1.951 ; Fall       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; -1.528 ; -2.187 ; Fall       ; KEY[2]          ;
+;  KEY[2]   ; KEY[2]     ; 0.136  ; -0.239 ; Fall       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; -1.465 ; -2.031 ; Fall       ; KEY[2]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 4.920 ; 4.656 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 4.291 ; 4.096 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 4.886 ; 4.636 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 4.920 ; 4.656 ; Fall       ; KEY[2]          ;
+;  LEDR[3]  ; KEY[2]     ; 4.139 ; 3.970 ; Fall       ; KEY[2]          ;
+;  LEDR[4]  ; KEY[2]     ; 3.968 ; 3.823 ; Fall       ; KEY[2]          ;
+;  LEDR[5]  ; KEY[2]     ; 4.579 ; 4.353 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 3.849 ; 3.711 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 4.164 ; 3.976 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 4.719 ; 4.479 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 4.766 ; 4.513 ; Fall       ; KEY[2]          ;
+;  LEDR[3]  ; KEY[2]     ; 4.017 ; 3.854 ; Fall       ; KEY[2]          ;
+;  LEDR[4]  ; KEY[2]     ; 3.849 ; 3.711 ; Fall       ; KEY[2]          ;
+;  LEDR[5]  ; KEY[2]     ; 4.439 ; 4.222 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.891  ; 0.239 ; -3.512   ; 0.419   ; -3.000              ;
+;  KEY[2]          ; -2.891  ; 0.239 ; -3.512   ; 0.419   ; -3.000              ;
+; Design-wide TNS  ; -13.312 ; 0.0   ; -6.785   ; 0.0     ; -3.0                ;
+;  KEY[2]          ; -13.312 ; 0.000 ; -6.785   ; 0.000   ; -3.000              ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; KEY[2]     ; 4.849 ; 5.165 ; Rise       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; 4.003 ; 4.366 ; Rise       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; 4.547 ; 4.868 ; Rise       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; 4.849 ; 5.165 ; Rise       ; KEY[2]          ;
+; KEY[*]    ; KEY[2]     ; 6.529 ; 6.953 ; Fall       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; 6.010 ; 6.295 ; Fall       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; 6.529 ; 6.953 ; Fall       ; KEY[2]          ;
+;  KEY[2]   ; KEY[2]     ; 3.106 ; 3.179 ; Fall       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; 6.125 ; 6.416 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; KEY[2]     ; -1.416 ; -2.007 ; Rise       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; -1.416 ; -2.007 ; Rise       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; -1.544 ; -2.156 ; Rise       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; -1.819 ; -2.381 ; Rise       ; KEY[2]          ;
+; KEY[*]    ; KEY[2]     ; 0.136  ; -0.239 ; Fall       ; KEY[2]          ;
+;  KEY[0]   ; KEY[2]     ; -1.399 ; -1.951 ; Fall       ; KEY[2]          ;
+;  KEY[1]   ; KEY[2]     ; -1.528 ; -2.187 ; Fall       ; KEY[2]          ;
+;  KEY[2]   ; KEY[2]     ; 0.136  ; -0.239 ; Fall       ; KEY[2]          ;
+;  KEY[3]   ; KEY[2]     ; -1.465 ; -2.031 ; Fall       ; KEY[2]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 8.513 ; 8.556 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 7.306 ; 7.249 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 8.407 ; 8.473 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 8.513 ; 8.556 ; Fall       ; KEY[2]          ;
+;  LEDR[3]  ; KEY[2]     ; 7.134 ; 7.196 ; Fall       ; KEY[2]          ;
+;  LEDR[4]  ; KEY[2]     ; 6.807 ; 6.839 ; Fall       ; KEY[2]          ;
+;  LEDR[5]  ; KEY[2]     ; 7.864 ; 8.026 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDR[*]   ; KEY[2]     ; 3.849 ; 3.711 ; Fall       ; KEY[2]          ;
+;  LEDR[0]  ; KEY[2]     ; 4.164 ; 3.976 ; Fall       ; KEY[2]          ;
+;  LEDR[1]  ; KEY[2]     ; 4.719 ; 4.479 ; Fall       ; KEY[2]          ;
+;  LEDR[2]  ; KEY[2]     ; 4.766 ; 4.513 ; Fall       ; KEY[2]          ;
+;  LEDR[3]  ; KEY[2]     ; 4.017 ; 3.854 ; Fall       ; KEY[2]          ;
+;  LEDR[4]  ; KEY[2]     ; 3.849 ; 3.711 ; Fall       ; KEY[2]          ;
+;  LEDR[5]  ; KEY[2]     ; 4.439 ; 4.222 ; Fall       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; LEDR[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[3]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[4]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDR[5]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; KEY[2]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[3]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[1]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[0]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDR[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; LEDR[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; LEDR[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; LEDR[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; LEDR[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; LEDR[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDR[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDR[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDR[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[2]     ; KEY[2]   ; 0        ; 2        ; 12       ; 32       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[2]     ; KEY[2]   ; 0        ; 2        ; 12       ; 32       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[2]     ; KEY[2]   ; 8        ; 36       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[2]     ; KEY[2]   ; 8        ; 36       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 18    ; 18   ;
+; Unconstrained Output Ports      ; 6     ; 6    ;
+; Unconstrained Output Port Paths ; 6     ; 6    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Wed Nov 20 13:00:04 2024
+Info: Command: quartus_sta Thunderbird -c Thunderbird
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 9 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Thunderbird.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name KEY[2] KEY[2]
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "comb_3|comb_87|comb_4|comb_3|QInternal~2|combout"
+    Warning (332126): Node "comb_3|comb_87|comb_4|comb_3|QInternal~1|datac"
+    Warning (332126): Node "comb_3|comb_87|comb_4|comb_3|QInternal~1|combout"
+    Warning (332126): Node "comb_3|comb_87|comb_4|comb_3|QInternal~2|dataa"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "comb_3|comb_90|comb_4|comb_3|QInternal~1|combout"
+    Warning (332126): Node "comb_3|comb_90|comb_4|comb_3|QInternal~0|datac"
+    Warning (332126): Node "comb_3|comb_90|comb_4|comb_3|QInternal~0|combout"
+    Warning (332126): Node "comb_3|comb_90|comb_4|comb_3|QInternal~1|dataa"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "comb_3|comb_99|comb_4|comb_3|QInternal~1|combout"
+    Warning (332126): Node "comb_3|comb_99|comb_4|comb_3|QInternal~0|datab"
+    Warning (332126): Node "comb_3|comb_99|comb_4|comb_3|QInternal~0|combout"
+    Warning (332126): Node "comb_3|comb_99|comb_4|comb_3|QInternal~1|datac"
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.891
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.891             -13.312 KEY[2] 
+Info (332146): Worst-case hold slack is 0.570
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.570               0.000 KEY[2] 
+Info (332146): Worst-case recovery slack is -3.512
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.512              -6.785 KEY[2] 
+Info (332146): Worst-case removal slack is 0.963
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.963               0.000 KEY[2] 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -3.000 KEY[2] 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.531
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.531             -11.990 KEY[2] 
+Info (332146): Worst-case hold slack is 0.537
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.537               0.000 KEY[2] 
+Info (332146): Worst-case recovery slack is -3.121
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.121              -6.046 KEY[2] 
+Info (332146): Worst-case removal slack is 0.866
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.866               0.000 KEY[2] 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -3.000 KEY[2] 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.100
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.100              -3.209 KEY[2] 
+Info (332146): Worst-case hold slack is 0.239
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.239               0.000 KEY[2] 
+Info (332146): Worst-case recovery slack is -1.787
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.787              -3.482 KEY[2] 
+Info (332146): Worst-case removal slack is 0.419
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.419               0.000 KEY[2] 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -3.000 KEY[2] 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4711 megabytes
+    Info: Processing ended: Wed Nov 20 13:00:07 2024
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+
