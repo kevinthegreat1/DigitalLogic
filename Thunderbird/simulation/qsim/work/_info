@@ -8,7 +8,7 @@ Z1 !s100 9idBZnk=4IfzRb`b<5j8g2
 Z2 I7OjFJ`AmOgSZZ[f[^fWEU3
 Z3 VT>5Fc@FK<?jhQi<Mi@e@N0
 Z4 dC:\Users\User\Documents\KevinYang\Thunderbird\simulation\qsim
-Z5 w1732125412
+Z5 w1733254350
 Z6 8Thunderbird.vo
 Z7 FThunderbird.vo
 L0 31
@@ -20,33 +20,33 @@ Z10 o-work work -O0
 Z11 n@thunderbird
 !i10b 1
 !s85 0
-Z12 !s108 1732125413.156000
+Z12 !s108 1733254351.636000
 Z13 !s107 Thunderbird.vo|
 !s101 -O0
 vThunderbird_vlg_check_tst
 !i10b 1
-Z14 !s100 l1QBC86`Sc:<3z7=4NfXZ2
-Z15 IU7[dhHB<JhjzL7mg<W5YQ1
+Z14 !s100 Z^5fR4@[b:U;[==DXl<IK3
+Z15 I]zFRN6DS[FJI3NWiVnhbf3
 Z16 VZX30h:bY:zB62AKE]91^o1
 R4
-Z17 w1732125410
-Z18 8Waveform.vwf.vt
-Z19 FWaveform.vwf.vt
+Z17 w1733254348
+Z18 8Thunderbird.vwf.vt
+Z19 FThunderbird.vwf.vt
 L0 63
 R8
 r1
 !s85 0
 31
-Z20 !s108 1732125413.234000
-Z21 !s107 Waveform.vwf.vt|
-Z22 !s90 -work|work|Waveform.vwf.vt|
+Z20 !s108 1733254351.730000
+Z21 !s107 Thunderbird.vwf.vt|
+Z22 !s90 -work|work|Thunderbird.vwf.vt|
 !s101 -O0
 R10
 Z23 n@thunderbird_vlg_check_tst
 vThunderbird_vlg_sample_tst
 !i10b 1
-Z24 !s100 jR37A;WH:S_UXSk]NnH=S0
-Z25 IS@PLFH^X?P9zPoW;X>?VL3
+Z24 !s100 `?Yl6@Ra2IaAAQ[>z>E:G1
+Z25 I[9VNU<CooN3MG8DH0]6lG2
 Z26 VOX:GSiVRlf27H5GdV0^kn1
 R4
 R17
@@ -65,14 +65,14 @@ R10
 Z27 n@thunderbird_vlg_sample_tst
 vThunderbird_vlg_vec_tst
 !i10b 1
-!s100 E5lVUQH5Z1LlAWcIVGD2W0
-IDhU27KHWDl^jn@EKo?_zN1
+!s100 ?0CW=7FK^IS_cV>g?IF3c0
+IBG;CJT53_ib>NLDKclAWk0
 Z28 VB@_ZVP2JzAMBX9;C@gVmF3
 R4
 R17
 R18
 R19
-Z29 L0 255
+L0 255
 R8
 r1
 !s85 0
@@ -82,13 +82,13 @@ R21
 R22
 !s101 -O0
 R10
-Z30 n@thunderbird_vlg_vec_tst
+Z29 n@thunderbird_vlg_vec_tst
 vThunderbirdTest
-Z31 !s100 RVTnP78oj5X;l?G?nC=mV1
-Z32 Ildd8b:1:g52bM6Gc]O>O=0
-Z33 Vn7dTIZkd4[YMXi?ZRf5HV0
+Z30 !s100 GY?TKKXdjOIKjQaG[kiAZ2
+Z31 Iaad6[1EOOFYi0UmZdC8IZ3
+Z32 V1O<o_YB6_]O;CL8SH7=E83
 R4
-Z34 w1732124283
+Z33 w1733253666
 R6
 R7
 L0 31
@@ -97,29 +97,69 @@ r1
 31
 R9
 R10
-Z35 n@thunderbird@test
-Z36 !s108 1732124284.289000
+Z34 n@thunderbird@test
+Z35 !s108 1733253667.486000
 R13
 !i10b 1
 !s85 0
 !s101 -O0
-vThunderbirdTest_vlg_vec_tst
-Z37 !s100 W:LznkYoi5f?RRZeGAm;Q1
-Z38 IU_U:QY48h[0_Dj626Eahz1
-Z39 Vlc=2FLl]dN5DW@00ATT[h3
+vThunderbirdTest_vlg_check_tst
+Z36 !s100 oi7lSZYjLhU8SWBF]If_H1
+Z37 IZNDo>Dn[o4UCkPPn[0@[c3
+Z38 VXR7F==ZIMEVTAC8zCL[;L2
 R4
-Z40 w1732124281
-R18
-R19
+Z39 w1733253664
+Z40 8ThunderbirdTest.vwf.vt
+Z41 FThunderbirdTest.vwf.vt
+L0 57
+R8
+r1
+31
+Z42 !s108 1733253667.564000
+Z43 !s107 ThunderbirdTest.vwf.vt|
+Z44 !s90 -work|work|ThunderbirdTest.vwf.vt|
+R10
+Z45 n@thunderbird@test_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vThunderbirdTest_vlg_sample_tst
+Z46 !s100 IAS3zBQ]VOdeZNS;?MoEj1
+Z47 IhWZh3P2NK1]@GgdbAScDJ1
+Z48 VjSkFYLXVnXgEA_bhe_]ZP1
+R4
+R39
+R40
+R41
 L0 29
 R8
 r1
 31
-R22
+R42
+R43
+R44
 R10
-Z41 n@thunderbird@test_vlg_vec_tst
-Z42 !s108 1732124284.367000
-Z43 !s107 Waveform.vwf.vt|
+Z49 n@thunderbird@test_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vThunderbirdTest_vlg_vec_tst
+Z50 !s100 ^jcROKNSnVIYl8E60_UeA0
+Z51 IC:lPV@PX=`dG0C6SaiDF^3
+Z52 Vlc=2FLl]dN5DW@00ATT[h3
+R4
+R39
+R40
+R41
+Z53 L0 457
+R8
+r1
+31
+R42
+R43
+R44
+R10
+Z54 n@thunderbird@test_vlg_vec_tst
 !i10b 1
 !s85 0
 !s101 -O0

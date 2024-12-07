@@ -25,5 +25,5 @@
 # Loading work.Thunderbird_vlg_sample_tst
 # Loading work.Thunderbird_vlg_check_tst
 # Simulation passed !
-# ** Note: $finish    : Waveform.vwf.vt(251)
+# ** Note: $finish    : Thunderbird.vwf.vt(251)
 #    Time: 1 us  Iteration: 0  Instance: /Thunderbird_vlg_vec_tst/tb_out

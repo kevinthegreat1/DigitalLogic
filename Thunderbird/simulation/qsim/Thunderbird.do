@@ -1,7 +1,7 @@
 onerror {exit -code 1}
 vlib work
 vlog -work work Thunderbird.vo
-vlog -work work Waveform.vwf.vt
+vlog -work work Thunderbird.vwf.vt
 vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate work.Thunderbird_vlg_vec_tst -voptargs="+acc"
 vcd file -direction Thunderbird.msim.vcd
 vcd add -internal Thunderbird_vlg_vec_tst/*
