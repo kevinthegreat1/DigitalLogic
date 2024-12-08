@@ -1,26 +1,39 @@
-|Thunderbird
+|ThunderbirdTest
+KEY[0] => _.IN1
+KEY[1] => _.IN1
+KEY[2] => _.IN1
+KEY[3] => _.IN1
+LEDR[0] <= Thunderbird:comb_3.port5
+LEDR[1] <= Thunderbird:comb_3.port5
+LEDR[2] <= Thunderbird:comb_3.port5
+LEDR[3] <= Thunderbird:comb_3.port4
+LEDR[4] <= Thunderbird:comb_3.port4
+LEDR[5] <= Thunderbird:comb_3.port4
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+LEDR[10] <= <GND>
+LEDR[11] <= <GND>
+LEDR[12] <= <GND>
+LEDR[13] <= <GND>
+LEDR[14] <= <GND>
+LEDR[15] <= <GND>
+LEDR[16] <= <GND>
+LEDR[17] <= <GND>
+
+
+|ThunderbirdTest|Thunderbird:comb_3
+L => LRterm1.IN0
+L => LRterm2.IN0
 L => Lnext.IN0
-L => Lnext.IN0
-L => Lnext.IN0
-L => Lnext.IN0
-L => Rnext.IN0
-L => Rnext.IN0
-L => Rnext.IN0
+L => Rnext.IN1
 L => Rnext.IN0
 L => Rnext.IN1
 L => Rnext.IN1
-L => Rnext.IN1
-L => Rnext.IN1
-L => Rnext.IN1
-R => Lnext.IN1
-R => Lnext.IN1
-R => Lnext.IN1
+R => LRterm1.IN1
+R => LRterm2.IN1
 R => Rnext.IN1
-R => Rnext.IN1
-R => Rnext.IN1
-R => Rnext.IN1
-R => Lnext.IN1
-R => Lnext.IN1
 R => Lnext.IN1
 R => Lnext.IN1
 R => Lnext.IN1
@@ -32,22 +45,22 @@ Reset => comb.IN1
 Reset => comb.IN1
 Reset => comb.IN1
 CLK => CLK.IN6
-Lout[0] << DFlipFlop:comb_84.port2
-Lout[1] << DFlipFlop:comb_87.port2
-Lout[2] << DFlipFlop:comb_90.port2
-Rout[0] << DFlipFlop:comb_93.port2
-Rout[1] << DFlipFlop:comb_96.port2
-Rout[2] << DFlipFlop:comb_99.port2
+Lout[0] <= DFlipFlop:comb_337.port2
+Lout[1] <= DFlipFlop:comb_340.port2
+Lout[2] <= DFlipFlop:comb_343.port2
+Rout[0] <= DFlipFlop:comb_352.port2
+Rout[1] <= DFlipFlop:comb_349.port2
+Rout[2] <= DFlipFlop:comb_346.port2
 
 
-|Thunderbird|DFlipFlop:comb_84
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_337
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|Thunderbird|DFlipFlop:comb_84|DLatchKevin:comb_4
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -56,14 +69,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|Thunderbird|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Thunderbird|DFlipFlop:comb_84|DLatchKevin:comb_6
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -72,21 +85,21 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|Thunderbird|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Thunderbird|DFlipFlop:comb_87
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_340
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|Thunderbird|DFlipFlop:comb_87|DLatchKevin:comb_4
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_340|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -95,14 +108,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|Thunderbird|DFlipFlop:comb_87|DLatchKevin:comb_4|SRNorLatch:comb_3
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_340|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Thunderbird|DFlipFlop:comb_87|DLatchKevin:comb_6
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_340|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -111,21 +124,21 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|Thunderbird|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_340|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Thunderbird|DFlipFlop:comb_90
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_343
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|Thunderbird|DFlipFlop:comb_90|DLatchKevin:comb_4
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_343|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -134,14 +147,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|Thunderbird|DFlipFlop:comb_90|DLatchKevin:comb_4|SRNorLatch:comb_3
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_343|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Thunderbird|DFlipFlop:comb_90|DLatchKevin:comb_6
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_343|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -150,21 +163,21 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|Thunderbird|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_343|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Thunderbird|DFlipFlop:comb_93
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_346
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|Thunderbird|DFlipFlop:comb_93|DLatchKevin:comb_4
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_346|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -173,14 +186,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|Thunderbird|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_346|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Thunderbird|DFlipFlop:comb_93|DLatchKevin:comb_6
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_346|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -189,21 +202,21 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|Thunderbird|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_346|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Thunderbird|DFlipFlop:comb_96
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_349
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|Thunderbird|DFlipFlop:comb_96|DLatchKevin:comb_4
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_349|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -212,14 +225,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|Thunderbird|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_349|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Thunderbird|DFlipFlop:comb_96|DLatchKevin:comb_6
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_349|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -228,21 +241,21 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|Thunderbird|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_349|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Thunderbird|DFlipFlop:comb_99
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_352
 D => D.IN1
 CLK => CLKL1.IN1
 Q <= DLatchKevin:comb_6.port2
 Qbar <= DLatchKevin:comb_6.port3
 
 
-|Thunderbird|DFlipFlop:comb_99|DLatchKevin:comb_4
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_352|DLatchKevin:comb_4
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -251,14 +264,14 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|Thunderbird|DFlipFlop:comb_99|DLatchKevin:comb_4|SRNorLatch:comb_3
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_352|DLatchKevin:comb_4|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 Qbar <= QbarInternal.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Thunderbird|DFlipFlop:comb_99|DLatchKevin:comb_6
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_352|DLatchKevin:comb_6
 D => comb.IN0
 D => comb.IN0
 E => comb.IN1
@@ -267,7 +280,7 @@ Q <= SRNorLatch:comb_3.port2
 Qbar <= SRNorLatch:comb_3.port3
 
 
-|Thunderbird|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3
+|ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_352|DLatchKevin:comb_6|SRNorLatch:comb_3
 S => QbarInternal.IN0
 R => QInternal.IN1
 Q <= Q.DB_MAX_OUTPUT_PORT_TYPE

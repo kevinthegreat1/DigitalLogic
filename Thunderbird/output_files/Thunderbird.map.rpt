@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Thunderbird
-Tue Dec 03 14:21:28 2024
+Sat Dec 07 19:40:55 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -15,10 +15,15 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Logic Cells Representing Combinational Loops
   9. General Register Statistics
- 10. Port Connectivity Checks: "DFlipFlop:comb_93"
- 11. Port Connectivity Checks: "DFlipFlop:comb_84|DLatchKevin:comb_4"
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_352"
+ 11. Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_349"
+ 12. Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_346"
+ 13. Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_343"
+ 14. Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_340"
+ 15. Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_4"
+ 16. Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_337"
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +49,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 03 14:21:28 2024      ;
+; Analysis & Synthesis Status        ; Successful - Sat Dec 07 19:40:55 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Thunderbird                                ;
-; Top-level Entity Name              ; Thunderbird                                ;
+; Top-level Entity Name              ; ThunderbirdTest                            ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 25                                         ;
-;     Total combinational functions  ; 25                                         ;
+; Total logic elements               ; 39                                         ;
+;     Total combinational functions  ; 39                                         ;
 ;     Dedicated logic registers      ; 0                                          ;
 ; Total registers                    ; 0                                          ;
-; Total pins                         ; 10                                         ;
+; Total pins                         ; 22                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -67,7 +72,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; Thunderbird        ; Thunderbird        ;
+; Top-level entity name                                                      ; ThunderbirdTest    ; Thunderbird        ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -165,107 +170,109 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                              ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
-; ../DFlipFlop/SRNorLatch.v        ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/DFlipFlop/SRNorLatch.v    ;         ;
-; ../DFlipFlop/DLatch.v            ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/DFlipFlop/DLatch.v        ;         ;
-; ../DFlipFlop/DFlipFlop.v         ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/DFlipFlop/DFlipFlop.v     ;         ;
-; Thunderbird.v                    ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/Thunderbird/Thunderbird.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
+; ../DFlipFlop/SRNorLatch.v        ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/DFlipFlop/SRNorLatch.v        ;         ;
+; ../DFlipFlop/DLatch.v            ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/DFlipFlop/DLatch.v            ;         ;
+; ../DFlipFlop/DFlipFlop.v         ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/DFlipFlop/DFlipFlop.v         ;         ;
+; Thunderbird.v                    ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/Thunderbird/Thunderbird.v     ;         ;
+; ThunderbirdTest.v                ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/KevinYang/Thunderbird/ThunderbirdTest.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 25        ;
-;                                             ;           ;
-; Total combinational functions               ; 25        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 13        ;
-;     -- 3 input functions                    ; 12        ;
-;     -- <=2 input functions                  ; 0         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 25        ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 0         ;
-;     -- Dedicated logic registers            ; 0         ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 10        ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 17        ;
-; Total fan-out                               ; 104       ;
-; Average fan-out                             ; 2.31      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 39           ;
+;                                             ;              ;
+; Total combinational functions               ; 39           ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 21           ;
+;     -- 3 input functions                    ; 15           ;
+;     -- <=2 input functions                  ; 3            ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 39           ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 0            ;
+;     -- Dedicated logic registers            ; 0            ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 22           ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+; Maximum fan-out node                        ; KEY[2]~input ;
+; Maximum fan-out                             ; 14           ;
+; Total fan-out                               ; 163          ;
+; Average fan-out                             ; 1.96         ;
++---------------------------------------------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                 ; Library Name ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+--------------+
-; |Thunderbird                 ; 25 (4)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |Thunderbird                                                        ; work         ;
-;    |DFlipFlop:comb_84|       ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_84                                      ; work         ;
-;       |DLatchKevin:comb_4|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_84|DLatchKevin:comb_4                   ; work         ;
-;          |SRNorLatch:comb_3| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
-;       |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_84|DLatchKevin:comb_6                   ; work         ;
-;          |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
-;    |DFlipFlop:comb_87|       ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_87                                      ; work         ;
-;       |DLatchKevin:comb_4|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_87|DLatchKevin:comb_4                   ; work         ;
-;          |SRNorLatch:comb_3| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_87|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
-;       |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_87|DLatchKevin:comb_6                   ; work         ;
-;          |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
-;    |DFlipFlop:comb_90|       ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_90                                      ; work         ;
-;       |DLatchKevin:comb_4|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_90|DLatchKevin:comb_4                   ; work         ;
-;          |SRNorLatch:comb_3| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_90|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
-;       |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_90|DLatchKevin:comb_6                   ; work         ;
-;          |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
-;    |DFlipFlop:comb_93|       ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_93                                      ; work         ;
-;       |DLatchKevin:comb_4|   ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_93|DLatchKevin:comb_4                   ; work         ;
-;          |SRNorLatch:comb_3| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
-;       |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_93|DLatchKevin:comb_6                   ; work         ;
-;          |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
-;    |DFlipFlop:comb_96|       ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_96                                      ; work         ;
-;       |DLatchKevin:comb_4|   ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_96|DLatchKevin:comb_4                   ; work         ;
-;          |SRNorLatch:comb_3| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
-;       |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_96|DLatchKevin:comb_6                   ; work         ;
-;          |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
-;    |DFlipFlop:comb_99|       ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_99                                      ; work         ;
-;       |DLatchKevin:comb_4|   ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_99|DLatchKevin:comb_4                   ; work         ;
-;          |SRNorLatch:comb_3| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_99|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
-;       |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_99|DLatchKevin:comb_6                   ; work         ;
-;          |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Thunderbird|DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                      ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
+; |ThunderbirdTest                ; 39 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |ThunderbirdTest                                                                            ; work         ;
+;    |Thunderbird:comb_3|         ; 39 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3                                                         ; work         ;
+;       |DFlipFlop:comb_337|      ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_337                                      ; work         ;
+;          |DLatchKevin:comb_4|   ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_4                   ; work         ;
+;             |SRNorLatch:comb_3| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
+;          |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_6                   ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
+;       |DFlipFlop:comb_340|      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_340                                      ; work         ;
+;          |DLatchKevin:comb_4|   ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_340|DLatchKevin:comb_4                   ; work         ;
+;             |SRNorLatch:comb_3| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_340|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
+;          |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_340|DLatchKevin:comb_6                   ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_340|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
+;       |DFlipFlop:comb_343|      ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_343                                      ; work         ;
+;          |DLatchKevin:comb_4|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_343|DLatchKevin:comb_4                   ; work         ;
+;             |SRNorLatch:comb_3| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_343|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
+;          |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_343|DLatchKevin:comb_6                   ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_343|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
+;       |DFlipFlop:comb_346|      ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_346                                      ; work         ;
+;          |DLatchKevin:comb_4|   ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_346|DLatchKevin:comb_4                   ; work         ;
+;             |SRNorLatch:comb_3| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_346|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
+;          |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_346|DLatchKevin:comb_6                   ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_346|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
+;       |DFlipFlop:comb_349|      ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_349                                      ; work         ;
+;          |DLatchKevin:comb_4|   ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_349|DLatchKevin:comb_4                   ; work         ;
+;             |SRNorLatch:comb_3| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_349|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
+;          |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_349|DLatchKevin:comb_6                   ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_349|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
+;       |DFlipFlop:comb_352|      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_352                                      ; work         ;
+;          |DLatchKevin:comb_4|   ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_352|DLatchKevin:comb_4                   ; work         ;
+;             |SRNorLatch:comb_3| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_352|DLatchKevin:comb_4|SRNorLatch:comb_3 ; work         ;
+;          |DLatchKevin:comb_6|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_352|DLatchKevin:comb_6                   ; work         ;
+;             |SRNorLatch:comb_3| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ThunderbirdTest|Thunderbird:comb_3|DFlipFlop:comb_352|DLatchKevin:comb_6|SRNorLatch:comb_3 ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops                    ;
-+------------------------------------------------------------+----+
-; Logic Cell Name                                            ;    ;
-+------------------------------------------------------------+----+
-; DFlipFlop:comb_84|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
-; DFlipFlop:comb_87|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
-; DFlipFlop:comb_90|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
-; DFlipFlop:comb_93|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
-; DFlipFlop:comb_96|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
-; DFlipFlop:comb_99|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
-; DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
-; DFlipFlop:comb_87|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
-; DFlipFlop:comb_90|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
-; DFlipFlop:comb_93|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
-; DFlipFlop:comb_96|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
-; DFlipFlop:comb_99|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
-; Number of logic cells representing combinational loops     ; 12 ;
-+------------------------------------------------------------+----+
++-------------------------------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                                        ;
++--------------------------------------------------------------------------------+----+
+; Logic Cell Name                                                                ;    ;
++--------------------------------------------------------------------------------+----+
+; Thunderbird:comb_3|DFlipFlop:comb_352|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
+; Thunderbird:comb_3|DFlipFlop:comb_349|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
+; Thunderbird:comb_3|DFlipFlop:comb_346|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
+; Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
+; Thunderbird:comb_3|DFlipFlop:comb_340|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
+; Thunderbird:comb_3|DFlipFlop:comb_343|DLatchKevin:comb_6|SRNorLatch:comb_3|Q~0 ;    ;
+; Thunderbird:comb_3|DFlipFlop:comb_352|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
+; Thunderbird:comb_3|DFlipFlop:comb_349|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
+; Thunderbird:comb_3|DFlipFlop:comb_346|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
+; Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
+; Thunderbird:comb_3|DFlipFlop:comb_340|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
+; Thunderbird:comb_3|DFlipFlop:comb_343|DLatchKevin:comb_4|SRNorLatch:comb_3|Q~0 ;    ;
+; Number of logic cells representing combinational loops                         ; 12 ;
++--------------------------------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -285,7 +292,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "DFlipFlop:comb_93"                                                                  ;
+; Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_352"                                              ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -294,7 +301,52 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "DFlipFlop:comb_84|DLatchKevin:comb_4"                                               ;
+; Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_349"                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_346"                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_343"                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_340"                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_4"                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Qbar ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Thunderbird:comb_3|DFlipFlop:comb_337"                                              ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -317,7 +369,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Dec 03 14:21:26 2024
+    Info: Processing started: Sat Dec 07 19:40:53 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Thunderbird -c Thunderbird
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file /users/user/documents/kevinyang/dflipflop/srnorlatch.v
@@ -333,27 +385,42 @@ Info (12021): Found 1 design units, including 1 entities, in source file thunder
 Critical Warning (10846): Verilog HDL Instantiation warning at DLatch.v(2): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at DFlipFlop.v(4): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at DFlipFlop.v(8): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Thunderbird.v(12): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Thunderbird.v(13): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Thunderbird.v(14): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Thunderbird.v(16): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Thunderbird.v(17): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Thunderbird.v(18): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at Thunderbird.v(27): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at Thunderbird.v(28): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at Thunderbird.v(29): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at Thunderbird.v(30): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at Thunderbird.v(31): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at Thunderbird.v(32): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at ThunderbirdTest.v(2): instance has no name
-Info (12127): Elaborating entity "Thunderbird" for the top level hierarchy
-Info (12128): Elaborating entity "DFlipFlop" for hierarchy "DFlipFlop:comb_84"
-Info (12128): Elaborating entity "DLatchKevin" for hierarchy "DFlipFlop:comb_84|DLatchKevin:comb_4"
-Info (12128): Elaborating entity "SRNorLatch" for hierarchy "DFlipFlop:comb_84|DLatchKevin:comb_4|SRNorLatch:comb_3"
+Info (12127): Elaborating entity "ThunderbirdTest" for the top level hierarchy
+Warning (10034): Output port "LEDR[17..6]" at ThunderbirdTest.v(1) has no driver
+Info (12128): Elaborating entity "Thunderbird" for hierarchy "Thunderbird:comb_3"
+Info (12128): Elaborating entity "DFlipFlop" for hierarchy "Thunderbird:comb_3|DFlipFlop:comb_337"
+Info (12128): Elaborating entity "DLatchKevin" for hierarchy "Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_4"
+Info (12128): Elaborating entity "SRNorLatch" for hierarchy "Thunderbird:comb_3|DFlipFlop:comb_337|DLatchKevin:comb_4|SRNorLatch:comb_3"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND
+    Warning (13410): Pin "LEDR[10]" is stuck at GND
+    Warning (13410): Pin "LEDR[11]" is stuck at GND
+    Warning (13410): Pin "LEDR[12]" is stuck at GND
+    Warning (13410): Pin "LEDR[13]" is stuck at GND
+    Warning (13410): Pin "LEDR[14]" is stuck at GND
+    Warning (13410): Pin "LEDR[15]" is stuck at GND
+    Warning (13410): Pin "LEDR[16]" is stuck at GND
+    Warning (13410): Pin "LEDR[17]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 35 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 61 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 25 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4628 megabytes
-    Info: Processing ended: Tue Dec 03 14:21:28 2024
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 39 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4624 megabytes
+    Info: Processing ended: Sat Dec 07 19:40:55 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

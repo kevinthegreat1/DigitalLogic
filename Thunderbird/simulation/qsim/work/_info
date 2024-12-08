@@ -4,11 +4,11 @@ K3
 cModel Technology
 Z0 dC:\Users\User\Documents\KevinYang\Thunderbird\simulation\qsim
 vThunderbird
-Z1 !s100 9idBZnk=4IfzRb`b<5j8g2
-Z2 I7OjFJ`AmOgSZZ[f[^fWEU3
+Z1 !s100 N?=Ff8]8HORR=b3?6?n3<2
+Z2 ISU[I=[c<e:Dk1DCmdz3bN1
 Z3 VT>5Fc@FK<?jhQi<Mi@e@N0
 Z4 dC:\Users\User\Documents\KevinYang\Thunderbird\simulation\qsim
-Z5 w1733254350
+Z5 w1733618262
 Z6 8Thunderbird.vo
 Z7 FThunderbird.vo
 L0 31
@@ -18,33 +18,32 @@ r1
 Z9 !s90 -work|work|Thunderbird.vo|
 Z10 o-work work -O0
 Z11 n@thunderbird
+Z12 !s108 1733618263.273000
+Z13 !s107 Thunderbird.vo|
 !i10b 1
 !s85 0
-Z12 !s108 1733254351.636000
-Z13 !s107 Thunderbird.vo|
 !s101 -O0
 vThunderbird_vlg_check_tst
-!i10b 1
 Z14 !s100 Z^5fR4@[b:U;[==DXl<IK3
 Z15 I]zFRN6DS[FJI3NWiVnhbf3
 Z16 VZX30h:bY:zB62AKE]91^o1
 R4
-Z17 w1733254348
+Z17 w1733618260
 Z18 8Thunderbird.vwf.vt
 Z19 FThunderbird.vwf.vt
 L0 63
 R8
 r1
-!s85 0
 31
-Z20 !s108 1733254351.730000
+Z20 !s108 1733618263.367000
 Z21 !s107 Thunderbird.vwf.vt|
 Z22 !s90 -work|work|Thunderbird.vwf.vt|
-!s101 -O0
 R10
 Z23 n@thunderbird_vlg_check_tst
-vThunderbird_vlg_sample_tst
 !i10b 1
+!s85 0
+!s101 -O0
+vThunderbird_vlg_sample_tst
 Z24 !s100 `?Yl6@Ra2IaAAQ[>z>E:G1
 Z25 I[9VNU<CooN3MG8DH0]6lG2
 Z26 VOX:GSiVRlf27H5GdV0^kn1
@@ -55,40 +54,40 @@ R19
 L0 29
 R8
 r1
-!s85 0
 31
 R20
 R21
 R22
-!s101 -O0
 R10
 Z27 n@thunderbird_vlg_sample_tst
-vThunderbird_vlg_vec_tst
 !i10b 1
-!s100 ?0CW=7FK^IS_cV>g?IF3c0
-IBG;CJT53_ib>NLDKclAWk0
-Z28 VB@_ZVP2JzAMBX9;C@gVmF3
+!s85 0
+!s101 -O0
+vThunderbird_vlg_vec_tst
+Z28 !s100 ?0CW=7FK^IS_cV>g?IF3c0
+Z29 IBG;CJT53_ib>NLDKclAWk0
+Z30 VB@_ZVP2JzAMBX9;C@gVmF3
 R4
 R17
 R18
 R19
-L0 255
+Z31 L0 255
 R8
 r1
-!s85 0
 31
 R20
 R21
 R22
-!s101 -O0
 R10
-Z29 n@thunderbird_vlg_vec_tst
+Z32 n@thunderbird_vlg_vec_tst
+!i10b 1
+!s85 0
+!s101 -O0
 vThunderbirdTest
-Z30 !s100 GY?TKKXdjOIKjQaG[kiAZ2
-Z31 Iaad6[1EOOFYi0UmZdC8IZ3
-Z32 V1O<o_YB6_]O;CL8SH7=E83
+Z33 IF8`K;^Gz[YHQmV6=Jz?hb1
+Z34 V1O<o_YB6_]O;CL8SH7=E83
 R4
-Z33 w1733253666
+Z35 w1733618530
 R6
 R7
 L0 31
@@ -97,69 +96,70 @@ r1
 31
 R9
 R10
-Z34 n@thunderbird@test
-Z35 !s108 1733253667.486000
-R13
+Z36 n@thunderbird@test
 !i10b 1
+Z37 !s100 SIi8F4Q4;BM1928C9]K5W2
 !s85 0
+Z38 !s108 1733618531.048000
+R13
 !s101 -O0
 vThunderbirdTest_vlg_check_tst
-Z36 !s100 oi7lSZYjLhU8SWBF]If_H1
-Z37 IZNDo>Dn[o4UCkPPn[0@[c3
-Z38 VXR7F==ZIMEVTAC8zCL[;L2
+!i10b 1
+Z39 !s100 oi7lSZYjLhU8SWBF]If_H1
+Z40 IZNDo>Dn[o4UCkPPn[0@[c3
+Z41 VXR7F==ZIMEVTAC8zCL[;L2
 R4
-Z39 w1733253664
-Z40 8ThunderbirdTest.vwf.vt
-Z41 FThunderbirdTest.vwf.vt
+Z42 w1733618528
+Z43 8ThunderbirdTest.vwf.vt
+Z44 FThunderbirdTest.vwf.vt
 L0 57
 R8
 r1
-31
-Z42 !s108 1733253667.564000
-Z43 !s107 ThunderbirdTest.vwf.vt|
-Z44 !s90 -work|work|ThunderbirdTest.vwf.vt|
-R10
-Z45 n@thunderbird@test_vlg_check_tst
-!i10b 1
 !s85 0
+31
+Z45 !s108 1733618531.141000
+Z46 !s107 ThunderbirdTest.vwf.vt|
+Z47 !s90 -work|work|ThunderbirdTest.vwf.vt|
 !s101 -O0
+R10
+Z48 n@thunderbird@test_vlg_check_tst
 vThunderbirdTest_vlg_sample_tst
-Z46 !s100 IAS3zBQ]VOdeZNS;?MoEj1
-Z47 IhWZh3P2NK1]@GgdbAScDJ1
-Z48 VjSkFYLXVnXgEA_bhe_]ZP1
+!i10b 1
+Z49 !s100 IAS3zBQ]VOdeZNS;?MoEj1
+Z50 IhWZh3P2NK1]@GgdbAScDJ1
+Z51 VjSkFYLXVnXgEA_bhe_]ZP1
 R4
-R39
-R40
-R41
+R42
+R43
+R44
 L0 29
 R8
 r1
+!s85 0
 31
+R45
+R46
+R47
+!s101 -O0
+R10
+Z52 n@thunderbird@test_vlg_sample_tst
+vThunderbirdTest_vlg_vec_tst
+!i10b 1
+Z53 !s100 VR5Vm0C`8kH?@2Dm>bB4E3
+Z54 I_Cc2YoJAo]5;McK:1JB]d3
+Z55 Vlc=2FLl]dN5DW@00ATT[h3
+R4
 R42
 R43
 R44
-R10
-Z49 n@thunderbird@test_vlg_sample_tst
-!i10b 1
-!s85 0
-!s101 -O0
-vThunderbirdTest_vlg_vec_tst
-Z50 !s100 ^jcROKNSnVIYl8E60_UeA0
-Z51 IC:lPV@PX=`dG0C6SaiDF^3
-Z52 Vlc=2FLl]dN5DW@00ATT[h3
-R4
-R39
-R40
-R41
-Z53 L0 457
+Z56 L0 457
 R8
 r1
-31
-R42
-R43
-R44
-R10
-Z54 n@thunderbird@test_vlg_vec_tst
-!i10b 1
 !s85 0
+31
+R45
+R46
+R47
 !s101 -O0
+R10
+Z57 n@thunderbird@test_vlg_vec_tst

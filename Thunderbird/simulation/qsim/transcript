@@ -2,28 +2,25 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module Thunderbird
+# -- Compiling module ThunderbirdTest
 # 
 # Top level modules:
-# 	Thunderbird
+# 	ThunderbirdTest
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module Thunderbird_vlg_sample_tst
-# -- Compiling module Thunderbird_vlg_check_tst
-# -- Compiling module Thunderbird_vlg_vec_tst
+# -- Compiling module ThunderbirdTest_vlg_sample_tst
+# -- Compiling module ThunderbirdTest_vlg_check_tst
+# -- Compiling module ThunderbirdTest_vlg_vec_tst
 # 
 # Top level modules:
-# 	Thunderbird_vlg_vec_tst
-# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.Thunderbird_vlg_vec_tst 
-# Loading work.Thunderbird_vlg_vec_tst
-# Loading work.Thunderbird
+# 	ThunderbirdTest_vlg_vec_tst
+# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.ThunderbirdTest_vlg_vec_tst 
+# Loading work.ThunderbirdTest_vlg_vec_tst
+# Loading work.ThunderbirdTest
 # Loading cycloneive_ver.cycloneive_io_obuf
 # Loading cycloneive_ver.cycloneive_io_ibuf
-# Loading cycloneive_ver.cycloneive_clkctrl
-# Loading cycloneive_ver.cycloneive_mux41
-# Loading cycloneive_ver.cycloneive_ena_reg
 # Loading cycloneive_ver.cycloneive_lcell_comb
-# Loading work.Thunderbird_vlg_sample_tst
-# Loading work.Thunderbird_vlg_check_tst
+# Loading work.ThunderbirdTest_vlg_sample_tst
+# Loading work.ThunderbirdTest_vlg_check_tst
 # Simulation passed !
-# ** Note: $finish    : Thunderbird.vwf.vt(251)
-#    Time: 1 us  Iteration: 0  Instance: /Thunderbird_vlg_vec_tst/tb_out
+# ** Note: $finish    : ThunderbirdTest.vwf.vt(453)
+#    Time: 1 us  Iteration: 0  Instance: /ThunderbirdTest_vlg_vec_tst/tb_out
