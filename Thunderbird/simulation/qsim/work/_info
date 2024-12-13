@@ -84,10 +84,11 @@ Z32 n@thunderbird_vlg_vec_tst
 !s85 0
 !s101 -O0
 vThunderbirdTest
-Z33 IF8`K;^Gz[YHQmV6=Jz?hb1
-Z34 V1O<o_YB6_]O;CL8SH7=E83
+Z33 !s100 SIi8F4Q4;BM1928C9]K5W2
+Z34 IF8`K;^Gz[YHQmV6=Jz?hb1
+Z35 V1O<o_YB6_]O;CL8SH7=E83
 R4
-Z35 w1733618530
+Z36 w1733803134
 R6
 R7
 L0 31
@@ -96,11 +97,10 @@ r1
 31
 R9
 R10
-Z36 n@thunderbird@test
+Z37 n@thunderbird@test
 !i10b 1
-Z37 !s100 SIi8F4Q4;BM1928C9]K5W2
 !s85 0
-Z38 !s108 1733618531.048000
+Z38 !s108 1733803135.102000
 R13
 !s101 -O0
 vThunderbirdTest_vlg_check_tst
@@ -109,7 +109,7 @@ Z39 !s100 oi7lSZYjLhU8SWBF]If_H1
 Z40 IZNDo>Dn[o4UCkPPn[0@[c3
 Z41 VXR7F==ZIMEVTAC8zCL[;L2
 R4
-Z42 w1733618528
+Z42 w1733803132
 Z43 8ThunderbirdTest.vwf.vt
 Z44 FThunderbirdTest.vwf.vt
 L0 57
@@ -117,7 +117,7 @@ R8
 r1
 !s85 0
 31
-Z45 !s108 1733618531.141000
+Z45 !s108 1733803135.180000
 Z46 !s107 ThunderbirdTest.vwf.vt|
 Z47 !s90 -work|work|ThunderbirdTest.vwf.vt|
 !s101 -O0

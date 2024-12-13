@@ -1,0 +1,19 @@
+module SevenSegmentDisplay(input [7:0]Ain, Bin, input Sel, input E, input Operation, output reg [6:0]out);
+	wire reg [7:0]A, B, val;
+
+	always @(posedge E) begin
+		case (Sel)
+			1'b0: A <= Ain;
+			1'b1: B <= Bin;
+		endcase
+	end
+
+	always @(A, B, Operation) begin
+		case (Operation)
+			2'b00: val <= A;
+			2'b01: val <= B;
+			2'b10: val <= A + B;
+			2'b11: val <= A ^ B;
+		endcase
+	end
+endmodule
