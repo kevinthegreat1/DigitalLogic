@@ -1,7 +1,7 @@
 module SevenSegmentDisplay(input [7:0]Ain, Bin, input Sel, input E, input [1:0]Operation, output reg [7:0]A, B, output [10:0]bcd, output [6:0]HEX2, HEX1, HEX0);
 	reg [8:0]val;
 
-	always @(E) begin
+	always @(E, Ain, Bin, Sel) begin
 		if (E) begin
 			case (Sel)
 				1'b0: A <= Ain;
