@@ -1,9 +1,0 @@
-module DFlipFlop(input D, input CLK, output Q, output Qbar);
-	wire CLKL1, Q1, Q1bar;
-	assign CLKL1 = ~CLK;
-	DLatch(D, CLKL1, Q1, Q1bar);
-
-	wire CLKL2;
-	assign CLKL2 = ~CLKL1;
-	DLatch(Q1, CLKL2, Q, Qbar);
-endmodule 

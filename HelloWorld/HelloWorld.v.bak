@@ -1,3 +1,0 @@
-module HelloWorld(input SW[17:0], output LEDR[17:0]);
-	assign LEDR = SW;
-endmodule

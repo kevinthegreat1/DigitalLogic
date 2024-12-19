@@ -1,5 +1,0 @@
-module FourBit4to1Mux(input [17:0]SW, output [3:0]LEDR);
-	wire [3:0]Mux1, [3:0]Mux2;
-	assign Mux1 = FourBit2to1Mux(SW, Mux1);
-	assign Mux2 = FourBit2to1Mux(SW, Mux2);
-	assign LEDR = SW[17] ? Mux1

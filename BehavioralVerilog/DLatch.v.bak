@@ -1,5 +1,0 @@
-module DLatchKevin(input D, input E, output reg Q);
-	always @(E) begin
-		Q <= D;
-	end
-endmodule
