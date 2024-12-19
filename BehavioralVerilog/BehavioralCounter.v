@@ -1,4 +1,4 @@
-module BehavioralCounter(input E, input CLK, input R, output[20:0] bcd, output [6:0]HEX4, HEX3, HEX2, HEX1, HEX0);
+module BehavioralCounter(input E, input CLK, input R, output [20:0]bcd, output [6:0]HEX4, HEX3, HEX2, HEX1, HEX0);
 	reg [15:0]Q;
 	always @(posedge CLK) begin
 		if (R) Q <= 0;
