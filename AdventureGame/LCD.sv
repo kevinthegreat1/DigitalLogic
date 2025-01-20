@@ -5,10 +5,10 @@ module LCD(input Reset, input CLOCK_50, input [7:0]characters[1:0][15:0], output
 	reg [19:0]CLK_400_Count;
 	always @(posedge CLOCK_50) begin
 		if (Reset) begin
-			CLK_400_Count <= 20'h00000;
+			CLK_400_Count <= 0;
 			CLK_400 <= 0;
 		end else if (CLK_400_Count == 20'h1E848) begin
-			CLK_400_Count <= 20'h00000;
+			CLK_400_Count <= 0;
 			CLK_400 <= 1;
 		end else begin
 			CLK_400_Count <= CLK_400_Count + 1;
@@ -18,15 +18,13 @@ module LCD(input Reset, input CLOCK_50, input [7:0]characters[1:0][15:0], output
 
 	reg [5:0]nextCommand;
 	reg line;
-	always @(posedge CLK_400) begin
+	always @(posedge CLK_400 or posedge Reset) begin
 		if (Reset) begin
 			state <= RESET0;
 			LCD_DATA <= 8'h38;
 			LCD_EN <= 1;
 			LCD_RS <= 0;
-		end
-
-		case (state)
+		end else if (CLK_400) case (state)
 			// These reset states are needed for reliable push button reset of lcd
 			RESET0: begin
 				LCD_EN <= 1;
@@ -111,7 +109,7 @@ module LCD(input Reset, input CLOCK_50, input [7:0]characters[1:0][15:0], output
 			end
 			TOGGLE_E: begin
 				LCD_EN <= 0;
-				state <= HOLD;
+				state <= nextCommand; // Used to go to HOLD but doesn't seem to be needed.
 			end
 			HOLD: state <= nextCommand;
 		endcase
