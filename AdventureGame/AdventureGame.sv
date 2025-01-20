@@ -9,5 +9,8 @@ module AdventureGame(input N, E, S, W, Reset, CLOCK_50, output [2:0]rooms, outpu
 	assign characters[0][1] = "b";
 	assign characters[0][2] = "c";
 	assign characters[0][3] = "d";
+	assign characters[1][13] = "x";
+	assign characters[1][14] = "y";
+	assign characters[1][15] = "z";
 	LCD(Reset, CLOCK_50, characters, lcdState, lcdCLK, LCD_EN, LCD_RS, LCD_DATA);
 endmodule
