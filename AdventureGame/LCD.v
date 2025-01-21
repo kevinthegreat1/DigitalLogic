@@ -1,7 +1,7 @@
 // https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller
 module LCD(	input Reset,
 				input CLOCK_50,
-				input [7:0]characters[1:0][15:0],
+				input [255:0]characters,
 				output reg [5:0]state,
 				output reg CLK_2500,
 				output reg LCD_EN,
@@ -113,7 +113,7 @@ module LCD(	input Reset,
 			WRITE: begin
 				LCD_EN <= 1;
 				LCD_RS <= 1;
-				LCD_DATA <= characters[counter[4]][counter[3:0]];
+				LCD_DATA <= characters[counter[4:0]*8 +: 8];
 				case (counter)
 					END_LINE0: nextCommand <= RETURN_TO_LINE_1;
 					END_LINE1: nextCommand <= RETURN_TO_LINE_0;
