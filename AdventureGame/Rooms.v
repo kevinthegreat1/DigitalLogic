@@ -1,12 +1,12 @@
 module Rooms(input N, E, S, W, Reset, sword, CLK, output reg [2:0]rooms, output reg [255:0]characters);
 	parameter CC = 3'b000, TT = 3'b001, RR = 3'b101, SSS = 3'b100, DD = 3'b110, GG = 3'b011, VV = 3'b111;
-	parameter	CCString = "    Cave of        Cacophany    ",
-					TTString = " Twisty Tunnel                  ",
-					RRString = "  Rapid River                   ",
-					SSSString = "     Secret       Sword Stash   ",
-					DDString = "  Dragon's Den                  ",
-					GGString = "    Grevious       Graveyard    ",
-					VVString = " Victory Vault                  ";
+	parameter	CCString = "    ynahpocaC        fo evaC    ",
+					TTString = "                  lennuT ytsiwT ",
+					RRString = "                   reviR dipaR  ",
+					SSSString = "   hsatS drowS       terceS     ",
+					DDString = "                  neD s'nogarD  ",
+					GGString = "    drayevarG       suoiverG    ",
+					VVString = "                  tluaV yrotciV ";
 	reg prevN, prevE, prevS, prevW;
 	reg [9:0]dragonFight;
 
