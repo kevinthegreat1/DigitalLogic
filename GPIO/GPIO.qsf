@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY LED
+set_global_assignment -name TOP_LEVEL_ENTITY Servo
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:56:57  MARCH 24, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
@@ -574,6 +574,9 @@ set_location_assignment PIN_V22 -to HSMC_TX_D_N[16]
 set_location_assignment PIN_T22 -to HSMC_RX_D_N[16]
 set_location_assignment PIN_V24 -to HSMC_CLKOUT_N2
 set_location_assignment PIN_G24 -to HSMC_CLKOUT_N1
+set_global_assignment -name VERILOG_FILE ../AdventureGame/Clock.v
+set_global_assignment -name VERILOG_FILE LED.v
+set_global_assignment -name VERILOG_FILE Servo.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -1102,6 +1105,4 @@ set_instance_assignment -name IO_STANDARD LVDS -to HSMC_TX_D_N[16]
 set_instance_assignment -name IO_STANDARD LVDS -to HSMC_RX_D_N[16]
 set_instance_assignment -name IO_STANDARD LVDS -to HSMC_CLKOUT_N2
 set_instance_assignment -name IO_STANDARD LVDS -to HSMC_CLKOUT_N1
-set_global_assignment -name VERILOG_FILE ../AdventureGame/Clock.v
-set_global_assignment -name VERILOG_FILE LED.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
