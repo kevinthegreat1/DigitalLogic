@@ -32,33 +32,117 @@ module TrainControlSystem(input [3:0]SW, input [3:0]KEY, input CLOCK_50, output 
 				if (stationTrackSelector[1:0] <= S2) begin
 					// When either station tracks 1 and 2 is selected, unset conflicting routes
 					// Conflicts with S1, S2, S3, S4 -> L1, L2
-					if (stationRoutes[S1][1:0] == L1 || stationRoutes[S1][1:0] == L2) stationRoutes[S1][1:0] = 0;
-					if (stationRoutes[S2][1:0] == L1 || stationRoutes[S2][1:0] == L2) stationRoutes[S2][1:0] = 0;
-					if (stationRoutes[S3][1:0] == L1 || stationRoutes[S3][1:0] == L2) stationRoutes[S3][1:0] = 0;
-					if (stationRoutes[S4][1:0] == L1 || stationRoutes[S4][1:0] == L2) stationRoutes[S4][1:0] = 0;
+					if (stationRoutes[S1][1:0] == L1 || stationRoutes[S1][1:0] == L2) stationRoutes[S1] = 0;
+					if (stationRoutes[S2][1:0] == L1 || stationRoutes[S2][1:0] == L2) stationRoutes[S2] = 0;
+					if (stationRoutes[S3][1:0] == L1 || stationRoutes[S3][1:0] == L2) stationRoutes[S3] = 0;
+					if (stationRoutes[S4][1:0] == L1 || stationRoutes[S4][1:0] == L2) stationRoutes[S4] = 0;
 					// Conflicts with L1, L2 -> S1, S2, S3, S4
 					leftRoutes[L1] = 0;
 					leftRoutes[L2] = 0;
 				end else begin
 					// When either station tracks 3 and 4 is selected, unset conflicting routes
 					// Conflicts with S1, S2 -> L2
-					if (stationRoutes[S1][1:0] == 1) stationRoutes[S1] = 0;
-					if (stationRoutes[S2][1:0] == 1) stationRoutes[S2] = 0;
+					if (stationRoutes[S1][1:0] == L2) stationRoutes[S1] = 0;
+					if (stationRoutes[S2][1:0] == L2) stationRoutes[S2] = 0;
 					// Conflicts with S3, S4 -> L1, L2
-					if (stationRoutes[S3][1:0] == 0 || stationRoutes[S3][1:0] == 1) stationRoutes[S3] = 0;
-					if (stationRoutes[S4][1:0] == 0 || stationRoutes[S4][1:0] == 1) stationRoutes[S4] = 0;
+					if (stationRoutes[S3][1:0] == L1 || stationRoutes[S3][1:0] == L2) stationRoutes[S3] = 0;
+					if (stationRoutes[S4][1:0] == L1 || stationRoutes[S4][1:0] == L2) stationRoutes[S4] = 0;
 					// Conflicts with L1 -> S3, S4
-					if (leftRoutes[L1][1:0] == 2 || leftRoutes[L1][1:0] == 3) leftRoutes[L1] = 0;
+					if (leftRoutes[L1][1:0] == S3 || leftRoutes[L1][1:0] == S4) leftRoutes[L1] = 0;
 					// Conflicts with L2 -> S1, S2, S3, S4
 					leftRoutes[L2] = 0;
 				end
-				// Set route from station
+				// Set route from station to L2
 				stationRoutes[stationTrackSelector[1:0]] = L2;
-			end else if (trackPressed[1:0] == 2'b10) begin
-				// Right track 1 (outbound) pressed, set selected station track and interlock
-				
-				// Set route from station
+				// Set the route
+				stationRoutes[stationTrackSelector[1:0]][2] = 1;
+			end else if (trackPressed[1:0] == R3) begin
+				// Right track 3 (outbound) pressed, set selected station track and interlock
+				if (stationTrackSelector[1:0] <= S2) begin
+					// When either station tracks 1 and 2 is selected, unset conflicting routes
+					// Conflicts with S1, S2 -> R3, R4
+					if (stationRoutes[S1][1:0] == R3 || stationRoutes[S1][1:0] == R4) stationRoutes[S1] = 0;
+					if (stationRoutes[S2][1:0] == R3 || stationRoutes[S2][1:0] == R4) stationRoutes[S2] = 0;
+					// Conflicts with S3, S4 -> R3
+					if (stationRoutes[S3][1:0] == R3) stationRoutes[S3] = 0;
+					if (stationRoutes[S4][1:0] == R3) stationRoutes[S4] = 0;
+					// Conflicts with R3 -> S1, S2, S3, S4
+					rightRoutes[R3] = 0;
+					// Conflicts with R4 -> S1, S2
+					if (rightRoutes[R4][1:0] == S1 || rightRoutes[R4][1:0] == S2) rightRoutes[R4] = 0;
+				end else begin
+					// When either station tracks 3 and 4 is selected, unset conflicting routes
+					// Conflicts with S1, S2, S3, S4 -> R3, R4
+					if (stationRoutes[S1][1:0] == R3 || stationRoutes[S1][1:0] == R4) stationRoutes[S1] = 0;
+					if (stationRoutes[S2][1:0] == R3 || stationRoutes[S2][1:0] == R4) stationRoutes[S2] = 0;
+					if (stationRoutes[S3][1:0] == R3 || stationRoutes[S3][1:0] == R4) stationRoutes[S3] = 0;
+					if (stationRoutes[S4][1:0] == R3 || stationRoutes[S4][1:0] == R4) stationRoutes[S4] = 0;
+					// Conflicts with R3, R4 -> S1, S2, S3, S4
+					rightRoutes[R3] = 0;
+					rightRoutes[R4] = 0;
+				end
+				// Set route from station to R3
 				stationRoutes[stationTrackSelector[1:0]] = R3;
+				// Set the route
+				stationRoutes[stationTrackSelector[1:0]][2] = 1;
+			end else if (trackPressed[1:0] == L1) begin
+				// Left track 1 (inbound) pressed, set selected station track and interlock
+				if (stationTrackSelector[1:0] <= S2) begin
+					// When either station tracks 1 and 2 is selected, unset conflicting routes
+					// Conflicts with S1, S2 -> L1, L2
+					if (stationRoutes[S1][1:0] == L1 || stationRoutes[S1][1:0] == L2) stationRoutes[S1] = 0;
+					if (stationRoutes[S2][1:0] == L1 || stationRoutes[S2][1:0] == L2) stationRoutes[S2] = 0;
+					// Conflicts with S3, S4 -> L1
+					if (stationRoutes[S3][1:0] == L1) stationRoutes[S3] = 0;
+					if (stationRoutes[S4][1:0] == L1) stationRoutes[S4] = 0;
+					// Conflicts with L1 -> S1, S2, S3, S4
+					leftRoutes[L1] = 0;
+					// Conflicts with L2 -> S1, S2
+					if (leftRoutes[L2][1:0] == S1 || leftRoutes[L2][1:0] == S2) leftRoutes[L2] = 0;
+				end else begin
+					// When either station tracks 3 and 4 is selected, unset conflicting routes
+					// Conflicts with S1, S2, S3, S4 -> L1, L2
+					if (stationRoutes[S1][1:0] == L1 || stationRoutes[S1][1:0] == L2) stationRoutes[S1] = 0;
+					if (stationRoutes[S2][1:0] == L1 || stationRoutes[S2][1:0] == L2) stationRoutes[S2] = 0;
+					if (stationRoutes[S3][1:0] == L1 || stationRoutes[S3][1:0] == L2) stationRoutes[S3] = 0;
+					if (stationRoutes[S4][1:0] == L1 || stationRoutes[S4][1:0] == L2) stationRoutes[S4] = 0;
+					// Conflicts with L1, L2 -> S1, S2, S3, S4
+					leftRoutes[L1] = 0;
+					leftRoutes[L2] = 0;
+				end
+				// Set route from L1 to station
+				leftRoutes[L1] = stationTrackSelector[1:0];
+				// Set the route
+				leftRoutes[L1][2] = 1;
+			end else if (trackPressed[1:0] == R4) begin
+				// Right track 4 (inbound) pressed, set selected station track and interlock
+				if (stationTrackSelector[1:0] <= S2) begin
+					// When either station tracks 1 and 2 is selected, unset conflicting routes
+					// Conflicts with S1, S2, S3, S4 -> R3, R4
+					if (stationRoutes[S1][1:0] == R3 || stationRoutes[S1][1:0] == R4) stationRoutes[S1] = 0;
+					if (stationRoutes[S2][1:0] == R3 || stationRoutes[S2][1:0] == R4) stationRoutes[S2] = 0;
+					if (stationRoutes[S3][1:0] == R3 || stationRoutes[S3][1:0] == R4) stationRoutes[S3] = 0;
+					if (stationRoutes[S4][1:0] == R3 || stationRoutes[S4][1:0] == R4) stationRoutes[S4] = 0;
+					// Conflicts with R3, R4 -> S1, S2, S3, S4
+					rightRoutes[R3] = 0;
+					rightRoutes[R4] = 0;
+				end else begin
+					// When either station tracks 3 and 4 is selected, unset conflicting routes
+					// Conflicts with S1, S2 -> R4
+					if (stationRoutes[S1][1:0] == R4) stationRoutes[S1] = 0;
+					if (stationRoutes[S2][1:0] == R4) stationRoutes[S2] = 0;
+					// Conflicts with S3, S4 -> R3, R4
+					if (stationRoutes[S3][1:0] == R3 || stationRoutes[S3][1:0] == R4) stationRoutes[S3] = 0;
+					if (stationRoutes[S4][1:0] == R3 || stationRoutes[S4][1:0] == R4) stationRoutes[S4] = 0;
+					// Conflicts with R3 -> S3, S4
+					if (rightRoutes[R3][1:0] == S3 || rightRoutes[R3][1:0] == S4) rightRoutes[R3] = 0;
+					// Conflicts with R4 -> S1, S2, S3, S4
+					rightRoutes[R4] = 0;
+				end
+				// Set route from R4 to station
+				rightRoutes[R4] = stationTrackSelector[1:0];
+				// Set the route
+				rightRoutes[R4][2] = 1;
 			end
 		end
 	end
